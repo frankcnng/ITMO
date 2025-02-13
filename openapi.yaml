@@ -335,7 +335,7 @@ paths:
       parameters:
         - name: regId
           in: path
-          description: The registry identifier of the participating Party registry in which the contact is to be inserted.
+          description: The registry identifier of the participating Party registry in which the account is to be inserted.
           required: true
           schema:
             $ref: "#/components/schemas/RegistryId"
@@ -644,6 +644,7 @@ paths:
         This operation can also be used by a registry to query the status of a pending action it is already aware of<br><br>
         * If it is a sending registry, at any point before its finalization.<br><br>
         * If it is a receiving registry, after it has been validated and before its finalization.<br><br>
+        The list of actions returned is sorted in descending order or the proposed action data time (ie, the oldest action is first).<br><br>
         Another operation (getfinalizedActions) returns actions with finalized statuses.
       parameters:
         - name: regId
@@ -682,7 +683,7 @@ paths:
     get:
       tags:
         - Action
-      operationId: getfinalizedActions
+      operationId: getFinalizedActions
       summary: Retrieve the finalized actions for the registry identified by regId and other filtering parameters
       description: Retrieve the finalized actions for the registry identified by regId and other filtering parameters.<br><br>
         finalized actions where the registry is either the sender, or the receiver are retrieved.<br><br>
@@ -832,7 +833,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Errors'
-
 
   /authorization/{regId}/registerCooperativeApproachAuth:
     post:
@@ -1088,7 +1088,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/Errors'
 
-
   /cooperativeApproach/{regId}/{caId}:
     get:
       tags:
@@ -1222,7 +1221,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/Errors'
 
-
   /itmo/{regId}/{ftpPartyId}{firstId}{lastId}:
     get:
       tags:
@@ -1285,7 +1283,7 @@ paths:
       tags:
         - ITMO
       operationId: updateITMO
-      summary: Update the attributes of the ITMO .
+      summary: Update the attributes of the ITMO.
       description: Update the attributes of the ITMO identified by ftpPartyId, firstId, lastId,<br>
         owned by the registry identified by regId.
       parameters:
@@ -1401,7 +1399,7 @@ components:
           type: array
           maxItems: 10
           description: The list of contacts for the registry.
-            The order attribute determines the order of presentation of the contacts,<br><br>
+            The order attribute of a contact determines the order of presentation,<br><br>
             and must start with 1, 2, 3 ... , without gaps and sorted ascendingly.<br><br>
             At least two contacts must be provided (primary and alternate), with order 1 and 2 respectively.
           items:
@@ -1409,7 +1407,7 @@ components:
         lastmodifieddatetime:
           type: string
           format: date-time
-          description: The date and time of the most recent change to the registry transactions, accounts or holdings.<br>
+          description: The date and time of the most recent change to the registry actions, accounts or holdings.<br>
             This is used to set the cut-off date during the export.
           example: "2026-07-21T17:22:28Z"
         creationdatetime:
@@ -1468,8 +1466,8 @@ components:
     Contact:
       type: object
       required:
-        - givenNames
         - familyName
+        - givenNames
         - email
         - phone
         - role
@@ -1499,7 +1497,7 @@ components:
 
     Action:
       type: object
-      description: An ProposedAction that has been validated by the hub, and given an actionId (see ProposedAction)
+      description: A ProposedAction that has been given an actionId by the hub after it has been proposed (see ProposedAction)
       required:
         - actionId
         - proposedAction
@@ -1930,13 +1928,15 @@ components:
     ITMO:
       type: object
       required:
+        # Properties required by decision 6/CMA.4, annex I, para.5, in the order specified in the decision
         - cooperativeApproachId
-        - authorisationId
         - originatingPartyRegistry
         - firstTransferringParty
         - firstId
         - lastId
         - vintage
+        # Other useful properties defined in these communication standards
+        - authorisationId
         - partyITMORegistry
       properties:
         cooperativeApproachId:
