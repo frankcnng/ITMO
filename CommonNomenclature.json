@@ -47,7 +47,8 @@
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
 		"description":	"Standard codes for identifying participating parties under Article 6.2 of the Paris Agreement.\nISO-3166-1 alpha-3 code of the Party's country.\nExceptionally reserved code elements, such as EUE for the European Union, are also allowed.",
-		"type":	"string"
+		"type":	"string",
+		"required":	"true"
 	},
 	"SubmissionVersion":
 		{
@@ -61,7 +62,8 @@
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
 		"description":	"The version number of the AEF Report for that year.\nThe format of the version number must by \"X.Y\" \nwhere X is a non-zero integer representing the major version,\nand Y is an integer representing the minor version.\nThe first version is always \"1.0\"",
-		"type":	"string"
+		"type":	"string",
+		"required":	"true"
 	},
 	
 	"CooperativeApproach":
