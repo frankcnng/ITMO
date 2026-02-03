@@ -5,6 +5,7 @@
 		"type": "string",
 		"contents":
 		[
+			"ParticipatingParty",
 			"CooperativeApproach",
 			"OriginatingPartyRegistry",
 			"FirstID",
@@ -23,25 +24,57 @@
 			"PurposeForAuthorization",
 			"Purpose",
 			"FirstTransfer",
-			"ParticipatingParty",
 			"AccountType",
 			"UnitType"
 		]
 	},
+
+	"ParticipatingParty":
+	{
+		"attribute":	"Participating Party",
+		"AEF fields":
+		[
+		  "Party",
+		  "Authorized Party(ies) ID",
+			"First transferring participating Party ID",
+			"Transferring participating Party ID",
+			"Acquiring participating Party ID",
+			"Using/cancelling participating Party ID"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"Standard codes for identifying participating parties under Article 6.2 of the Paris Agreement.\nISO-3166-1 alpha-3 code of the Party's country.\nExceptionally reserved code elements, such as EUE for the European Union, are also allowed.",
+		"type":	"string"
+	},
+	"SubmissionVersion":
+		{
+		"attribute":	"SubmissionVersion",
+		"AEF fields":
+		[
+		  "Version"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"The version number of the AEF Report for that year.\nThe format of the version number must by \"X.Y\" \nwhere X is a non-zero integer representing the major version,\nand Y is an integer representing the minor version.\nThe first version is always \"1.0\"",
+		"type":	"string"
+	},
+	
 	"CooperativeApproach":
 	{
 		"attribute":	"Cooperative Approach",
-		"description":	"Cooperative approach under Article 6.2.\nThe format of the string is \"CANNNN\" where the \"CA\" is the fixed prefix, and NNNN is a four-digit integer, that shall be incremented by one for each additional agreed cooperative approach, and added to this common nomenclature.",
+		"description":	"Cooperative approaches under Article 6.2.\nThe format of the string is \"CANNNN\" where the \"CA\" is the fixed prefix, and NNNN is a four-digit integer, that shall be incremented by one for each additional agreed cooperative approach, and added to this common nomenclature.",
 		"AEF fields":
 		[
 			"Cooperative approach"
 		],
 		"requiredBy":
 		[
-			"Decision 6/CMA.4, Annex I, paragraph 5(a)",
-			"Decision X/CMA.6, Annex II, Table 2, footnote c",
-			"Decision X/CMA.6, Annex II, Table 3, footnote c",
-			"Decision X/CMA.6, Annex II, Table 4, footnote a"
+			"Decision 6/CMA.4 Annex I, paragraph 5",
+			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
 		"type": "string",
 		"definedValues":
@@ -73,21 +106,17 @@
 		],
 		"required":	"true"
 	},
-	"FirstTransferringParty":
+	"OriginatingPartyRegistry":
 	{
-		"AEF fields":
-		[
-			"Unique identifier of the participating Party in which the authorized mitigation outcome occured."
-		],
 		"requiredBy":
 		[
-			"Decision 6/CMA.4, para. 17(j)",
-			"Decision 6/CMA.4, Annex I, para. 5(c)"
+			"Decision 6/CMA.4 Annex I, paragraph 5",
+			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"attribute":	"First Transferring Party",
-		"description":	"ISO-3166-1 alpha-3 code of the participating Party.",
+		"attribute":	"Originating Party Registry",
+		"description":	"The registry identifier of the registry that prepared the ITMO for first transfer.",
 		"type":	"string",
-		"required":	"false"
+		"required":	"true"
 	},
 	"FirstID":
 	{
@@ -125,49 +154,33 @@
 		"maximum":	"999999999",
 		"required":	"true"
 	},
-	"OriginatingPartyRegistry":
+	"FirstTransferringParty":
 	{
 		"AEF fields":
 		[
-			"Party ITMO registry ID"
+			"First transferring participating Party ID.\nNote that ITMO may exist before first transfer, thus this field is optional."
 		],
 		"requiredBy":
 		[
 			"Decision 6/CMA.4 Annex I, paragraph 5",
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"attribute":	"Originating Party Registry",
-		"description":	"ISO-3166-1 alpha-3 code of the registry that issued the ITMOs.",
+		"attribute":	"First Transferring Party",
+		"description":	"ISO-3166-1 alpha-3 code of participating Party in which the authorized mitigation outcome occurred as per common nomenclatures.",
 		"type":	"string",
-		"required":	"true"
-	},
-	"PartyITMORegistry":
-	{
-		"AEF fields":
-		[
-			"Party ITMO registry ID"
-		],
-		"requiredBy":
-		[
-			"AEF"
-		],
-		"attribute":	"PartyITMORegistry",
-		"description":	"ISO-3166-1 alpha-3 code of the participating Party registry in which the reported action has been tracked.",
-		"type":	"string",
-		"required":	"true"
+		"required":	"false"
 	},
 	"FirstTransfer":
 	{
 		"attribute":	"First Transfer",
-		"description":	"Definition of \"first transfer\" pursuant to decision, 2/CMA.3, Annex, paragraph 2.",
+		"description":	"Definition of \"first transfer\" pursuant to decision, 2/CMA.3, Annex, paragraph 2.\nTherefore defines the \"First Transferring Party.\".",
 		"AEF fields":
 		[
-			"Purpose for authorization",
-			"First transfer definition for OIMP."
+			"Definition of \"First transferring participating Party ID\"."
 		],
 		"requiredBy":
 		[
-			"Definition of \"First transfer definition for OIMP\"."
+			"Definition of \"First Transferring Party\"."
 		],
 		"type":	"string",
 		"definedValues":
@@ -580,39 +593,39 @@
 		"definedValues":
 		[
 			{
-				"code":	"0",
-				"value":	"Issuance",
-				"description":	"Used when reporting an issuance of an ITMO."
-			},
-			{
 				"code":	"1",
-				"value":	"Acquisition",
-				"description":	"Used when reporting the international acquisition of an ITMO."
+				"value":	"Authorization",
+				"description":	"Used when reporting the authorization of an ITMO."
 			},
 			{
 				"code":	"2",
-				"value":	"Transfer",
+				"value":	"First transfer",
 				"description":	"Used when reporting the international transfer of an ITMO."
 			},
 			{
 				"code":	"3",
+				"value":	"Transfer",
+				"description":	"Used when reporting the international transfer of an ITMO."
+			},
+			{
+				"code":	"4",
+				"value":	"Acquisition",
+				"description":	"Used when reporting the international acquisition of an ITMO."
+			},
+			{
+				"code":	"5",
 				"value":	"Use",
 				"description":	"Used when reporting the use of an ITMO."
 			},
 			{
-				"code":	"4",
+				"code":	"6",
 				"value":	"Cancellation",
 				"description":	"Used when reporting the cancellation of an ITMO."
 			},
 			{
-				"code":	"5",
+				"code":	"7",
 				"value":	"Voluntary Cancellation",
 				"description":	"Used when reporting the cancellation of an ITMO."
-			},
-			{
-				"code":	"6",
-				"value":	"First transfer",
-				"description":	"Used when reporting the international transfer of an ITMO."
 			}
 		],
 		"required":	"true"
@@ -686,31 +699,10 @@
 		"required":	"false"
 	},
 
-	"ParticipatingParty":
-	{
-		"attribute":	"Participating Party",
-		"AEF fields":
-		[
-			"First transferring participating Party ID",
-			"Party ITMO registry ID",
-			"Transferring participating Party ID",
-			"Acquiring participating Party ID",
-			"Using/cancelling participating Party ID",
-			"Using/cancelling authorized entity ID"
-		],
-		"requiredBy":
-		[
-			"Decision 6/CMA.4 paragraph 17 (j)"
-		],
-		"description":	"Standard codes for identifying participating parties under Article 6.2 of the Paris Agreement.\nISO-3166-1 alpha-3 code of the Party's country.\nExceptionally reserved code elements, such as EUE for the European Union, are also allowed.",
-		"type":	"string",
-		"required":	"false"
-	},
-
 	"AccountType":
 	{
 		"attribute":	"Account Type",
-		"description":	"Account Types defined in the communication standards",
+		"description":	"Minimum Account Types supported by the mechanism registry, under Article 6.4, Decision 7.CMA.4, Annex I - paragraph 32",
 		"AEF fields": "not applicable",
 		"type": "integer",
 		"requiredBy":
@@ -721,52 +713,9 @@
 		[
 			{
 				"value":	"100",
-				"description":	"Party holding.\nSee decision 2/CMA.3, annex, para. 29. and decision 3/CMA.3, annex, para. 63."
-			},
-			{
-				"value":	"110",
-				"description":	"Pending.\nSee decision 3/CMA.3, annex, para. 63."
-			},
-			{
-				"value":	"120",
-				"description":	"Authorized entity holding.\nSee decision 3/CMA.3, annex, para. 63."
-			},
-			{
-				"value":	"200",
-				"description":	"Use towards NDC.\nSee decision 2/CMA.3, annex, para. 29."
-			},
-			{
-				"value":	"210",
-				"description":	"Use towards OIMP.\nSee decision 2/CMA.3, annex, para. 29."
-			},
-			{
-				"value":	"300",
-				"description":	"Share of proceeds for adaptation.\nSee decision 3/CMA.3, annex, para. 58."
-			},
-			{
-				"value":	"400",
-				"description":	"Voluntary cancellation for other purposes.\nSee decision 2/CMA.3, annex, para. 29."
-			},
-			{
-				"value":	"410",
-				"description":	"Mandatory cancellation of A6.4ERs for OMGE.\nSee decision 3/CMA.3, annex, para. 59."
-			},
-			{
-				"value":	"420",
-				"description":	"Voluntary cancellation of A6.4ERs for OMGE.\nSee decision 3/CMA.3, annex, para. 70."
-			},
-			{
-				"value":	"430",
-				"description":	"Voluntary cancellation for OMGE of ITMOs not not counted towards NDC or OIMP.\nSee decision 2/CMA.3, annex, paras. 29 and 39."
-			},
-			{
-				"value":	"440",
-				"description":	"Cancellation for OIMP.\nSee decision 2/CMA.3, annex, para. 29."
-			},
-			{
-				"value":	"450",
-				"description":	"Administrative cancellation.\nSee decision 2/CMA.3, annex, para. 29."
+				"description":	"Holding."
 			}
+
 		],
 		"required":	"false"
 	},
