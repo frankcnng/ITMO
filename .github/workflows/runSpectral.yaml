@@ -28,8 +28,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-      - run: pip install python-docx
-      - run: python nom2docx.py -n CommonNomenclature.json -t CommonNomenclatureTemplate.docx -o CommonNomenclature.docx
+      # Uncomment to generate docx (currently doesn't work)
+      #- run: pip install python-docx
+      #- run: python nom2docx.py -n CommonNomenclature.json -t CommonNomenclatureTemplate.docx -o CommonNomenclature.docx
       # Uncomment to generate PDF (takes ca 10 mins)
       #- uses: jmservera/libreoffice-action@v0.2
       #  with:
@@ -41,6 +42,7 @@ jobs:
             - openapiCARP.html
             - diagrams/*.png
             - diagrams/*.svg
-            - CommonNomenclature.docx
+            # Uncomment to generate docx (currently doesn't work)
+            #- CommonNomenclature.docx
             # Uncomment to generate PDF (takes ca 10 mins)
             #- CommonNomenclature.pdf
