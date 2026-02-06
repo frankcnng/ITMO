@@ -1,4 +1,3 @@
-
 {
 	"CommonNomenclature":
 	{
@@ -137,6 +136,146 @@
 			{
 				"value":	"CA0006",
 				"description":	"ITMOs resulting from Paris Agreement Article 5.2: reducing emissions from deforestation and forest degradation, and the role of conservation, sustainable management of forests and enhancement of forest carbon stocks (by Suriname)"
+			},
+			{
+				"value":	"CA0007",
+				"description":	"Joint Crediting Mechanism between the government of Japan and the government of the Kingdom of Thailand"
+			},
+			{
+				"value":	"CA0008",
+				"description":	"The Joint Crediting Mechanism (JCM), established under the 'Low Carbon Development Partnership' between the Governments of Mongolia and Japan, operates in accordance with Article 6 of the Paris Agreement"
+			},
+			{
+				"value":	"CA0009",
+				"description":	"Grouped Projects for Cambodia Improved Cookstove"
+			},
+			{
+				"value":	"CA0010",
+				"description":	"Grouped Projects for Cambodia Water Purifier"
+			},
+			{
+				"value":	"CA0011",
+				"description":	"Cicada Clean Cooking Zimbabwe"
+			},
+			{
+				"value":	"CA0012",
+				"description":	"The Joint Crediting Mechanism between the Government of Maldives and the Government of Japan"
+			},
+			{
+				"value":	"CA0013",
+				"description":	"BIOMASS ENERGY FOR CONSERVATION PROGRAMME (GS11677)"
+			},
+			{
+				"value":	"CA0014",
+				"description":	"The Joint Crediting Mechanism between the Government of Palau and the Government of Japan"
+			},
+			{
+				"value":	"CA0015",
+				"description":	"The Joint Crediting Mechanism between the Government of the Republic of Tunisia and the Government of Japan"
+			},
+			{
+				"value":	"CA0016",
+				"description":	"Reducing emissions from deforestation and forest degradation, and the role of conservation, sustainable management of forests and enhancement of forest carbon stocks (REDD+)"
+			},
+			{
+				"value":	"CA0017",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the People’s Republic of Bangladesh"
+			},
+			{
+				"value":	"CA0018",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the Federal Democratic Republic of Ethiopia"
+			},
+			{
+				"value":	"CA0019",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the Republic of Kenya"
+			},
+			{
+				"value":	"CA0020",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the Socialist Republic of Viet Nam"
+			},
+			{
+				"value":	"CA0021",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the Lao People's Democratic Republic"
+			},
+			{
+				"value":	"CA0022",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the Republic of Indonesia"
+			},
+			{
+				"value":	"CA0023",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the Republic of Costa Rica"
+			},
+			{
+				"value":	"CA0024",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the Kingdom of Cambodia"
+			},
+			{
+				"value":	"CA0025",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the United Mexican States (Mexico)"
+			},
+			{
+				"value":	"CA0026",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the Republic of Chile"
+			},
+			{
+				"value":	"CA0027",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the Republic of the Philippines"
+			},
+			{
+				"value":	"CA0028",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the Republic of Senegal"
+			},
+			{
+				"value":	"CA0029",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the Republic of Azerbaijan"
+			},
+			{
+				"value":	"CA0030",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the Republic of Moldova"
+			},
+			{
+				"value":	"CA0031",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the Georgia"
+			},
+			{
+				"value":	"CA0032",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the Democratic Socialist Republic of Sri Lanka"
+			},
+			{
+				"value":	"CA0033",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the Republic of Uzbekistan"
+			},
+			{
+				"value":	"CA0034",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the Independent State of Papua New Guinea"
+			},
+			{
+				"value":	"CA0035",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the United Arab Emirates"
+			},
+			{
+				"value":	"CA0036",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the Kyrgyz Republic"
+			},
+			{
+				"value":	"CA0037",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the Republic of Kazakhstan"
+			},
+			{
+				"value":	"CA0038",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the Ukraine"
+			},
+			{
+				"value":	"CA0039",
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the United Republic of Tanzania"
+			},
+			{
+				"value":	"CA0040",
+				"description":	"Rwanda and Singapore"
+			},
+			{
+				"value":	"CA0041",
+				"description":	"Rwanda and Sweden"
 			}
 		],
 		"required":	"true"
