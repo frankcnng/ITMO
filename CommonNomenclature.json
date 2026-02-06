@@ -28,22 +28,19 @@
       "AuthorizationT&Cs",
       "FirstTransferDefnForOIMP",
       
-      
-			"OriginatingPartyRegistry",
+      "ActionDateTime",
+			"ActionType",
+			"ActionSubtype",
+			"RegistryID",
 			"FirstID",
 			"LastID",
-			"FirstTransferringParty",
-			"Vintage",
-			"ActivityType",
-
+			"UnderlyingUnitRegistryID",
+			"UnderlyingUnitFirstUnitID",
+			"UnderlyingUnitLastUnitID",
 			"QuantityCO2",
 			"QuantityNon-GHG",
 			"MitigationType",
-			"ActionType",
-			"Purpose",
-			"FirstTransfer",
-			"AccountType",
-			"UnitType"
+			"Vintage"
 		]
 	},
 
