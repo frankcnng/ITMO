@@ -1,3 +1,4 @@
+
 {
 	"CommonNomenclature":
 	{
@@ -7,22 +8,38 @@
 		[
 			"ParticipatingParty",
 			"SubmissionVersion",
-			"CooperativeApproach",
+			"ReportedYear",
+			"DateOfSubmission",
+			"FirstYearOfNDCPeriod",
+			"LastYearOfNDCPeriod",
+			"AuthorizationID",
+			"DateOfAuthorization",
+			"AuthorizationVersion",
+			"CooperativeApproachID",
+			"AuthorizedQuantity",
+			"Metric",
+			"GWPValues",
+			"Non-GHGMetric",		
+			"Sectors",
+			"PurposeForAuthorization",
+      "EntityID",
+      "OIMPAuthorized",
+      "AuthorizedTimeframe",
+      "AuthorizationT&Cs",
+      "FirstTransferDefnForOIMP",
+      
+      
 			"OriginatingPartyRegistry",
 			"FirstID",
 			"LastID",
 			"FirstTransferringParty",
 			"Vintage",
-			"Sectors",
 			"ActivityType",
-			"Metric",
-			"GWPValues",
-			"Non-GHGMetric",
+
 			"QuantityCO2",
 			"QuantityNon-GHG",
 			"MitigationType",
 			"ActionType",
-			"PurposeForAuthorization",
 			"Purpose",
 			"FirstTransfer",
 			"AccountType",
@@ -63,6 +80,23 @@
 		],
 		"description":	"The version number of the AEF Report for that year.\nThe format of the version number must by \"X.Y\" \nwhere X is a non-zero integer representing the major version,\nand Y is an integer representing the minor version.\nThe first version is always \"1.0\"",
 		"type":	"string",
+		"required":	"true"
+	},
+	"ReportedYear":
+		{
+		"attribute":	"ReportedYear",
+		"AEF fields":
+		[
+		  "Reported year"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"The four-digit year during which the actions occurred.",
+		"type":	"integer",
+		"minimum": 2020,
+		"maximum": 2040,
 		"required":	"true"
 	},
 	
@@ -109,6 +143,102 @@
 		],
 		"required":	"true"
 	},
+	"Metric":
+	{
+		"attribute":	"Metric",
+		"description":	"The metric used to measure the ITMO",
+		"AEF fields":
+		[
+			"Metric"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"type": "string",
+		"definedValues":
+		[
+			{
+				"code":	"1",
+				"value":	"GHG",
+				"description":	"ITMO is measured in tonnes Carbon Dioxide equivalent"
+			},
+			{
+				"code":	"2",
+				"value":	"non-GHG",
+				"description":	"ITMO is not measured in tonnes Carbon Dioxide equivalent"
+			}
+		],
+		"required":	"true"
+	},
+	"GWPValues":
+	{
+		"attribute":	"GWP Values",
+		"description":	"If the mitigation outcome involves a non-CO2 greenhouse gas(es), the global warming potential (GWP) value(s) applied, consistent with the relevant CMA decisions (e.g.,'100-year values from 5th assessment report by the IPCC').",
+		"AEF fields":
+		[
+			"Applicable GWP value(s)"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"type":
+		[
+			"string" 
+		],
+		"required":	"false"
+	},
+	"Non-GHGMetric":
+	{
+		"attribute":	"Non-GHGMetric",
+		"description":	"Type of non-GHG metric applied (e.g., ‘megawatt hours of renewable electricity generation’). This field should be reported as ‘Not applicable’ (NA) if the ITMOs are in a GHG metric.",
+		"AEF fields":
+		[
+			"Applicable GWP value(s)"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"type": "string",
+		"required":	"false"
+	},
+	"QuantityCO2":
+	{
+		"attribute":	"Quantity CO2",
+		"description":	"Quantity of ITMOs in metric tons of CO2 equivalent.",
+		"AEF fields":
+		[
+			"Quantity (t CO2 eq)"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"type": "integer",
+		"minimum": "1",
+		"maximum": "999999999",
+		"required":	"true"
+	},
+	"QuantityNon-GHG":
+	{
+		"attribute":	"Quantity non-GHG",
+		"description":	"Quantity of ITMOs in the respective non-GHG metric. This field should be reported as ‘Not applicable’ (NA) if the ITMOs are in a GHG metric.",
+		"AEF fields":
+		[
+			"Quantity (in non-GHG metric)"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"type": "integer",
+		"minimum": "1",
+		"maximum": "999999999",
+		"required":	"false"
+	},
+
 	"OriginatingPartyRegistry":
 	{
 		"requiredBy":
@@ -450,101 +580,6 @@
 			}
 		],
 		"required":	"true"
-	},
-	"Metric":
-	{
-		"attribute":	"Metric",
-		"description":	"The metric used to measure the ITMO",
-		"AEF fields":
-		[
-			"Metric"
-		],
-		"requiredBy":
-		[
-			"Decision 6/CMA.4 paragraph 17 (j)"
-		],
-		"type": "string",
-		"definedValues":
-		[
-			{
-				"code":	"1",
-				"value":	"GHG",
-				"description":	"ITMO is measured in tonnes Carbon Dioxide equivalent"
-			},
-			{
-				"code":	"2",
-				"value":	"non-GHG",
-				"description":	"ITMO is not measured in tonnes Carbon Dioxide equivalent"
-			}
-		],
-		"required":	"true"
-	},
-	"GWPValues":
-	{
-		"attribute":	"GWP Values",
-		"description":	"If the mitigation outcome involves a non-CO2 greenhouse gas(es), the global warming potential (GWP) value(s) applied, consistent with the relevant CMA decisions (e.g.,'100-year values from 5th assessment report by the IPCC').",
-		"AEF fields":
-		[
-			"Applicable GWP value(s)"
-		],
-		"requiredBy":
-		[
-			"Decision 6/CMA.4 paragraph 17 (j)"
-		],
-		"type":
-		[
-			"string" 
-		],
-		"required":	"false"
-	},
-	"Non-GHGMetric":
-	{
-		"attribute":	"Non-GHGMetric",
-		"description":	"Type of non-GHG metric applied (e.g., ‘megawatt hours of renewable electricity generation’). This field should be reported as ‘Not applicable’ (NA) if the ITMOs are in a GHG metric.",
-		"AEF fields":
-		[
-			"Applicable GWP value(s)"
-		],
-		"requiredBy":
-		[
-			"Decision 6/CMA.4 paragraph 17 (j)"
-		],
-		"type": "string",
-		"required":	"false"
-	},
-	"QuantityCO2":
-	{
-		"attribute":	"Quantity CO2",
-		"description":	"Quantity of ITMOs in metric tons of CO2 equivalent.",
-		"AEF fields":
-		[
-			"Quantity (t CO2 eq)"
-		],
-		"requiredBy":
-		[
-			"Decision 6/CMA.4 paragraph 17 (j)"
-		],
-		"type": "integer",
-		"minimum": "1",
-		"maximum": "999999999",
-		"required":	"true"
-	},
-	"QuantityNon-GHG":
-	{
-		"attribute":	"Quantity non-GHG",
-		"description":	"Quantity of ITMOs in the respective non-GHG metric. This field should be reported as ‘Not applicable’ (NA) if the ITMOs are in a GHG metric.",
-		"AEF fields":
-		[
-			"Quantity (in non-GHG metric)"
-		],
-		"requiredBy":
-		[
-			"Decision 6/CMA.4 paragraph 17 (j)"
-		],
-		"type": "integer",
-		"minimum": "1",
-		"maximum": "999999999",
-		"required":	"false"
 	},
 	"MitigationType":
 	{
