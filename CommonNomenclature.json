@@ -49,12 +49,13 @@
 		"attribute":	"Participating Party",
 		"AEF fields":
 		[
-		  "Party",
-		  "Authorized Party(ies) ID",
-			"First transferring participating Party ID",
-			"Transferring participating Party ID",
-			"Acquiring participating Party ID",
-			"Using/cancelling participating Party ID"
+		  "Submission: Party",
+		  "Authorizations: Authorized Party(ies) ID",
+			"Actions: First transferring participating Party ID",
+			"Actions: Transferring participating Party ID",
+			"Actions: Acquiring participating Party ID",
+			"Actions: Using/cancelling participating Party ID",
+			"Holdings: First transferring participating Party ID"
 		],
 		"requiredBy":
 		[
