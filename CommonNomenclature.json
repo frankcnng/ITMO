@@ -22,13 +22,13 @@
 			"Non-GHGMetric",		
 			"Sectors",
 			"PurposeForAuthorization",
-      "EntityID",
-      "OIMPAuthorized",
-      "AuthorizedTimeframe",
-      "AuthorizationT&Cs",
-      "FirstTransferDefnForOIMP",
-      
-      "ActionDateTime",
+			"EntityID",
+			"OIMPAuthorized",
+			"AuthorizedTimeframe",
+			"AuthorizationT&Cs",
+			"FirstTransferDefnForOIMP",
+
+			"ActionDateTime",
 			"ActionType",
 			"ActionSubtype",
 			"RegistryID",
@@ -56,8 +56,8 @@
 		"attribute":	"Participating Party",
 		"AEF fields":
 		[
-		  "Submission: Party",
-		  "Authorizations: Authorized Party(ies) ID",
+			"Submission: Party",
+			"Authorizations: Authorized Party(ies) ID",
 			"Actions: First transferring participating Party ID",
 			"Actions: Transferring participating Party ID",
 			"Actions: Acquiring participating Party ID",
@@ -77,7 +77,7 @@
 		"attribute":	"Submission version",
 		"AEF fields":
 		[
-		  "Submission: Version"
+			"Submission: Version"
 		],
 		"requiredBy":
 		[
@@ -92,7 +92,7 @@
 		"attribute":	"Reported year",
 		"AEF fields":
 		[
-		  "Submission: Reported year"
+			"Submission: Reported year"
 		],
 		"requiredBy":
 		[
@@ -109,7 +109,7 @@
 		"attribute":	"Date of submission",
 		"AEF fields":
 		[
-		  "Submission: Date of submission"
+			"Submission: Date of submission"
 		],
 		"requiredBy":
 		[
@@ -124,7 +124,7 @@
 		"attribute":	"First year of the NDC implementation period",
 		"AEF fields":
 		[
-		  "Submission: First year of the NDC implementation period"
+			"Submission: First year of the NDC implementation period"
 		],
 		"requiredBy":
 		[
@@ -141,7 +141,7 @@
 		"attribute":	"Last year of the NDC implementation period",
 		"AEF fields":
 		[
-		  "Submission: Last year of the NDC implementation period"
+			"Submission: Last year of the NDC implementation period"
 		],
 		"requiredBy":
 		[
@@ -168,18 +168,15 @@
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
 		"description":	"The Authorization ID as assigned by the reporting Party.\nAuthorization IDs can only contain alphanumeric, space, and hyphen characters.",
-		"type":
-		[
-			"string" 
-		],
+		"type": "string",
 		"required":	"true"
 	},
 	"DateOfAuthorization":
 	{
 		"AEF fields":
 		[
-		  "Authorization: Date of authorization",
-		  "Authorized entities: Date of the authorization"
+			"Authorization: Date of authorization",
+			"Authorized entities: Date of the authorization"
 		],
 		"requiredBy":
 		[
@@ -403,9 +400,9 @@
 		[
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"type": "integer",
-		"minimum": "1",
-		"maximum": "999999999",
+		"type":	"integer",
+		"minimum":	"1",
+		"maximum":	"999999999",
 		"required":	"false"
 	},
 
