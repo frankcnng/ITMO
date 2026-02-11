@@ -22,7 +22,8 @@
 			"Non-GHGMetric",		
 			"Sectors",
 			"PurposeForAuthorization",
-			"EntityID",
+			"AuthorizedPartyIDs",
+			"AuthorizedEntityIDs",
 			"OIMPAuthorized",
 			"AuthorizedTimeframe",
 			"AuthorizationT&Cs",
@@ -31,7 +32,8 @@
 			"ActionDateTime",
 			"ActionType",
 			"ActionSubtype",
-			"RegistryID",
+			"FirstTransferringPartyID",
+			"PartyITMORegistryID",
 			"FirstID",
 			"LastID",
 			"UnderlyingUnitRegistryID",
@@ -41,6 +43,13 @@
 			"QuantityNon-GHG",
 			"MitigationType",
 			"Vintage",
+			"TransferringPartyID",
+			"AcquiringPartyID",
+			"PurposeITMOUsedForOIMP",
+			"Using/cancellingPartyID",
+			"Using/cancellingEntityID",
+			"YearITMOUsedTowardsNDC",
+			"AdditionalInfoForAction",
 			
 			"AuthorizedEntityName",
 			"AuthorizedEntityCountryOfIncorporation",
@@ -391,7 +400,6 @@
 	"AuthorizedQuantity":
 	{
 		"attribute":	"Authorized quantity",
-		"description":	"This field is optional. It may be used to specify the maximum quantity of mitigation outcomes that are authorized for use towards an NDC and/or OIMP.",
 		"AEF fields":
 		[
 			"Authorizations: Authorized quantity"
@@ -400,13 +408,12 @@
 		[
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
+		"description":	"This field is optional. It may be used to specify the maximum quantity of mitigation outcomes that are authorized for use towards an NDC and/or OIMP.",
 		"type":	"integer",
 		"minimum":	"1",
 		"maximum":	"999999999",
 		"required":	"false"
 	},
-
-
 	"Metric":
 	{
 		"attribute":	"Metric",
@@ -439,16 +446,18 @@
 	},
 	"GWPValues":
 	{
-		"attribute":	"GWP Values",
-		"description":	"If the mitigation outcome involves a non-CO2 greenhouse gas(es), the global warming potential (GWP) value(s) applied, consistent with the relevant CMA decisions (e.g.,'100-year values from 5th assessment report by the IPCC').",
+		"attribute":	"Applicable GWP values",
 		"AEF fields":
 		[
-			"Applicable GWP value(s)"
+			"Authorizations: Applicable GWP value(s)",
+			"Actions: Applicable GWP values(s)",
+			"Holdings: Applicable GWP value(s)"
 		],
 		"requiredBy":
 		[
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
+		"description":	"If the mitigation outcome involves a non-CO2 greenhouse gas(es), the global warming potential (GWP) value(s) applied, consistent with the relevant CMA decisions (e.g.,'100-year values from 5th assessment report by the IPCC').",
 		"type":
 		[
 			"string" 
@@ -457,66 +466,255 @@
 	},
 	"Non-GHGMetric":
 	{
-		"attribute":	"Non-GHGMetric",
-		"description":	"Type of non-GHG metric applied (e.g., ‘megawatt hours of renewable electricity generation’). This field should be reported as ‘Not applicable’ (NA) if the ITMOs are in a GHG metric.",
+		"attribute":	"Applicable non-GHG metric",
 		"AEF fields":
 		[
-			"Applicable GWP value(s)"
+			"Authorizations: Applicable non-GHG metric",
+			"Actions: Applicable non-GHG metric",
+			"Holdings: Applicable non-GHG metric"
 		],
 		"requiredBy":
 		[
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
+		"description":	"Type of non-GHG metric applied (e.g., ‘megawatt hours of renewable electricity generation’). This field should be reported as ‘Not applicable’ (NA) if the ITMOs are in a GHG metric.",
 		"type": "string",
 		"required":	"false"
 	},
-	"QuantityCO2":
+	"Sectors":
 	{
-		"attribute":	"Quantity CO2",
-		"description":	"Quantity of ITMOs in metric tons of CO2 equivalent.",
+		"attribute":	"Sectors",
 		"AEF fields":
 		[
-			"Quantity (t CO2 eq)"
+			"Authorizations: Sector(s)"
 		],
 		"requiredBy":
 		[
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"type": "integer",
-		"minimum": "1",
-		"maximum": "999999999",
+		"description":	"One or more sectors where the mitigation outcome occurred based on IPCC guidelines.",
+		"type":
+		[
+			"string" 
+		],
+		"definedValues":
+		[
+			{
+				"code":	"1",
+				"value":	"Agriculture",
+				"description":	"Methane reduction nitrous oxide emission reduction are some examples of initiatives aimed at the agriculture sector, sustainable fish production, etc."
+			},
+			{
+				"code":	"2",
+				"value":	"Building and construction",
+				"description":	"Zero-energy and passive houses, green roofs and walls for urban buildings, smart grids and building automation systems, sustainable urban drainage systems, climateadaptive urban planning."
+			},
+			{
+				"code":	"3",
+				"value":	"Cross-sectoral mechanisms",
+				"description":	"ITMOs that cannot be associated to a specific sector since they are the net flow of mitigation outcomes coming from a different mechanism."
+			},
+			{
+				"code":	"4",
+				"value":	"Energy generation",
+				"description":	"Wind farms, offshore wind power, solar farms, hydroelectric plants, geothermal heating and cooling solutions or biomass energy, etc."
+			},
+			{
+				"code":	"5",
+				"value":	"Forestry and land use",
+				"description":	"Mangrove restoration, seagrass plantation, urban forestry and green spaces development, peatland restoration and conservation, soil carbon enhancement, land-use planning for reduced urban sprawl."
+			},
+			{
+				"code":	"6",
+				"value":	"Industrial processes",
+				"description":	"Fuel switching, carbon capture and storage (CCS), green chemistry, waste gas and heat recovery."
+			},
+			{
+				"code":	"7",
+				"value":	"Transportation",
+				"description":	"Hydrogen fuel cell vehicles and refueling infrastructure, sustainable biofuels for aviation and shipping, electric public transit systems, active transport infrastructure (bike lanes, pedestrian zones), smart logistics and freight transport efficiency."
+			},
+			{
+				"code":	"8",
+				"value":	"Urban development",
+				"description":	"Vegetative cover, afforestation, permeable surfaces, green roofs, rain gardens, bioretention swales, natural and constructed wetlands, converting abandoned industrial sites into urban parks."
+			},
+			{
+				"code":	"9",
+				"value":	"Waste management",
+				"description":	"Methane capture from landfills, waste-to-energy projects, Advanced recycling technologies, Biogas generation from organic waste, Circular economy models for industries (sharing, repairing, recycling), and the reduction of organic waste through composting and anaerobic digestion."
+			}
+		],
 		"required":	"true"
 	},
-	"QuantityNon-GHG":
+	"PurposeForAuthorization":
 	{
-		"attribute":	"Quantity non-GHG",
-		"description":	"Quantity of ITMOs in the respective non-GHG metric. This field should be reported as ‘Not applicable’ (NA) if the ITMOs are in a GHG metric.",
+		"attribute":	"Purpose for authorization",
 		"AEF fields":
 		[
-			"Quantity (in non-GHG metric)"
+			"Authorizations: Purposes for authorization"
 		],
 		"requiredBy":
 		[
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"type": "integer",
-		"minimum": "1",
-		"maximum": "999999999",
+		"description":	"Purpose for authorization of ITMOs",
+		"type":	"string",
+		"definedValues":
+		[
+			{
+				"code":	"1",
+				"value":	"NDC",
+				"description":	"ITMOs that are authorized to be used towards NDC (nationally determined contribution) achievement."
+			},
+			{
+				"code":	"2",
+				"value":	"OIMP",
+				"description":	"ITMOs that are authorized to be used for cancelled for OIMP (other international mitigation purposes)."
+			},
+			{
+				"code":	"3",
+				"value":	"IMP",
+				"description":	"ITMOs that are authorized to be used for cancelled for IMP (international mitigation purposes)."
+			},
+			{
+				"code":	"4",
+				"value":	"OP",
+				"description":	"ITMOs that are authorized to be used for cancelled for OP (other purposes)."
+			},
+			{
+				"code":	"5",
+				"value":	"NDC and OIMP",
+				"description":	"ITMOs that are authorized to be used towards NDC (nationally determined contribution) achievement;\nand be used or cancelled for OIMP (other international mitigation purposes)."
+			},
+			{
+				"code":	"6",
+				"value":	"NDC and IMP",
+				"description":	"ITMOs that are authorized to be used towards NDC (nationally determined contribution) achievement;\nand be used or cancelled for IMP (international mitigation purposes)."
+			},
+			{
+				"code":	"7",
+				"value":	"NDC and OP",
+				"description":	"ITMOs that are authorized to be used towards NDC (nationally determined contribution) achievement;\nand be used or cancelled for OP (other purposes)."
+			}
+		],
+		"required":	"true"
+	},
+	"AuthorizedPartyIDs":
+	{
+		"attribute":	"Authorized Party IDs",
+		"AEF fields":
+		[
+			"Authorizations: Authorized Party(ies) ID"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"Parties may authorize mitigation outcomes for use by any Party or for a specific Party(ies). Where a specific Party(ies) is specified, the unique identifier of that Party(ies) is entered here as per common nomenclatures.",
+		"type":
+		[
+			"string" 
+		],
+		"required":	"false"
+	},
+	"AuthorizedEntitiess":
+	{
+		"attribute":	"Authorized Entities",
+		"AEF fields":
+		[
+			"Authorizations: Authorized entity(ies) ID"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"Unique identifier of the entities that are authorized within cooperative approach, if applicable.",
+		"type":
+		[
+			"string" 
+		],
+		"required":	"false"
+	},
+	"OIMPAuthorized":
+	{
+		"attribute":	"OIMP authorized by the Party",
+		"AEF fields":
+		[
+			"Authorizations: OIMP authorized by the Party"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"This field is only applicable if the authorization is for OIMP. This field specifies the other international mitigation purpose (OIMP), which may be an international mitigation purpose (IMP) or other purpose (OP). The specific purpose (e.g., use under the Carbon Offsetting and Reduction Scheme for International Aviation) is entered in this field.",
+		"type":	"string",
+		"required":	"false"
+	},
+	"AuthorizedTimeframe":
+	{
+		"attribute":	"Authorized timeframe",
+		"AEF fields":
+		[
+			"Authorizations: Authorized timeframe"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"This field is optional. It may be filled to specify the timeframe for which mitigation outcomes may occur (e.g., from 2021 - 2030) that are covered under the authorization and/or the time frame in which the mitigation outcomes may be used (e.g. from 2021 - 2030).\nIf specified it must in the format of 4-digit years, separated by a hyphen: \"dddd - dddd\".",
+		"type":	"string",
+		"required":	"false"
+	},
+	"AuthorizationT&Cs":
+	{
+		"attribute":	"Authorized terms and conditions",
+		"AEF fields":
+		[
+			"Authorizations: Authorization terms and conditions"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"This field is optional. It may be completed to specify the terms and conditions under which the authorization is provided.",
+		"type":	"string",
+		"required":	"false"
+	},
+	"FirstTransferDefnForOIMP":
+	{
+		"attribute":	"First transfer definition for OIMP",
+		"AEF fields":
+		[
+			"Authorizations: First transfer definition for OIMP"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"This field is only applicable to authorizations for use towards OIMP. This field specifies the first transfer definition used by the Party pursuant to decision 2/CMA.3, annex, para. 2(b). In other cases, this field is reported as ‘Not applicable’ (NA).",
+		"type":	"string",
+		"definedValues":
+		[
+			{
+				"code":	"2",
+				"value":	"Authorisation",
+				"description":	"First transfer defined for ITMOs that are authorized for OIMP pursuant 2 (b)(1) Authorisation, Annex, 2/CMA.3."
+			},
+			{
+				"code":	"3",
+				"value":	"Issuance",
+				"description":	"First transfer defined for ITMOs that are authorized for OIMP pursuant 2 (b)(2) Issuance, Annex, 2/CMA.3."
+			},
+			{
+				"code":	"4",
+				"value":	"Use or Cancellation",
+				"description":	"First transfer defined for ITMOs that are authorized for OIMP pursuant 2 (b)(3) Use or Cancellation, Annex, 2/CMA.3."
+			}
+		],
 		"required":	"false"
 	},
 
-	"OriginatingPartyRegistry":
-	{
-		"requiredBy":
-		[
-			"Decision 6/CMA.4 Annex I, paragraph 5",
-			"Decision 6/CMA.4 paragraph 17 (j)"
-		],
-		"attribute":	"Originating Party Registry",
-		"description":	"The registry identifier of the registry that prepared the ITMO for first transfer.",
-		"type":	"string",
-		"required":	"true"
-	},
 	"FirstID":
 	{
 		"AEF fields":
@@ -607,6 +805,129 @@
 		],
 		"required":	"false"
 	},
+	"QuantityCO2":
+	{
+		"attribute":	"Quantity CO2",
+		"description":	"Quantity of ITMOs in metric tons of CO2 equivalent.",
+		"AEF fields":
+		[
+			"Quantity (t CO2 eq)"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"type": "integer",
+		"minimum": "1",
+		"maximum": "999999999",
+		"required":	"true"
+	},
+	"QuantityNon-GHG":
+	{
+		"attribute":	"Quantity non-GHG",
+		"description":	"Quantity of ITMOs in the respective non-GHG metric. This field should be reported as ‘Not applicable’ (NA) if the ITMOs are in a GHG metric.",
+		"AEF fields":
+		[
+			"Quantity (in non-GHG metric)"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"type": "integer",
+		"minimum": "1",
+		"maximum": "999999999",
+		"required":	"false"
+	},
+
+
+	"ActionType":
+	{
+		"attribute":	"Action Type",
+		"description":	"Actions to be reported by Partipating Parties, pursuant Decision 2/CMA.3, Annex, paragraph 20(a), paragraph 29.",
+		"AEF fields":
+		[
+			"Action type"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)",
+			"Decision 2/CMA.3, Annex, paragraph 20(a), paragraph 29."
+		],
+		"type":	"string",
+		"definedValues":
+		[
+			{
+				"code":	"1",
+				"value":	"Authorization",
+				"description":	"Used when reporting the authorization of an ITMO."
+			},
+			{
+				"code":	"2",
+				"value":	"First transfer",
+				"description":	"Used when reporting the international transfer of an ITMO."
+			},
+			{
+				"code":	"3",
+				"value":	"Transfer",
+				"description":	"Used when reporting the international transfer of an ITMO."
+			},
+			{
+				"code":	"4",
+				"value":	"Acquisition",
+				"description":	"Used when reporting the international acquisition of an ITMO."
+			},
+			{
+				"code":	"5",
+				"value":	"Use",
+				"description":	"Used when reporting the use of an ITMO."
+			},
+			{
+				"code":	"6",
+				"value":	"Cancellation",
+				"description":	"Used when reporting the cancellation of an ITMO."
+			},
+			{
+				"code":	"7",
+				"value":	"Voluntary Cancellation",
+				"description":	"Used when reporting the cancellation of an ITMO."
+			}
+		],
+		"required":	"true"
+	},
+	"MitigationType":
+	{
+		"attribute":	"Mitigation type",
+		"AEF fields":
+		[
+			"Mitigation type"
+		],
+		"requiredBy":
+		[
+			"6.2/CMA15, Annex II, Table 3"
+		],
+		"description":	"Allowed values: \"Emission reductions\", \"Removals\", \"Emission reductions and removals\".",
+		"type": "string",
+		"definedValues":
+		[
+			{
+				"code":	"1",
+				"value":	"Emission reductions",
+				"description":	"Emission reductions only"
+			},
+			{
+				"code":	"2",
+				"value":	"Removals",
+				"description":	"Removals only"
+			},
+			{
+				"code":	"3",
+				"value":	"Emission reductions and removals",
+				"description":	"Both emission reductions and removals"
+			}
+		],
+		"required":	"true"
+	},
 	"Vintage":
 	{
 		"AEF fields":
@@ -625,80 +946,42 @@
 		"maximum":	"9999",
 		"required":	"true"
 	},
-	"Sectors":
+	"PurposeForOIMP":
 	{
-		"attribute":	"Sectors",
-		"description":	"One or more sectors where the mitigation outcome occurred as per common nomenclatures based on IPCC guidelines.",
+		"attribute":	"Purpose for OIMP",
 		"AEF fields":
 		[
-			"Sector(s)"
+			"Actions: Purposes for which ITMO has been used towards or cancelled for OIMP"
 		],
 		"requiredBy":
 		[
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"type":
+		"description":	"This field is completed to specify the purpose for which the ITMO has been first transferred for use towards international mitigation purposes (IMP), cancelled for other purposes (OP) or cancelled for purposes referred to in paragraph 20(a), annex, decision 2/CMA.3. This field is only applicable to the action types ‘use’, ‘first transfer’ and ‘cancellation’. In other cases, this field is reported as Not applicable’ (NA).",
+		"type":	"string",
+		"required":	"false"
+	},
+
+
+	"OriginatingPartyRegistry":
+	{
+		"attribute":	"Originating Party Registry",
+		"description":	"The registry identifier of the registry that prepared the ITMO for first transfer.",
+		"AEF fields": "not applicable",
+		"requiredBy":
 		[
-			"string" 
+			"Decision 6/CMA.4 Annex I, paragraph 5",
+			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"definedValues":
-		[
-			{
-				"code":	"1",
-				"value":	"Agriculture",
-				"description":	"Methane reduction nitrous oxide emission reduction are some examples of initiatives aimed at the agriculture sector, sustainable fish production, etc."
-			},
-			{
-				"code":	"2",
-				"value":	"Building and construction",
-				"description":	"Zero-energy and passive houses, green roofs and walls for urban buildings, smart grids and building automation systems, sustainable urban drainage systems, climateadaptive urban planning."
-			},
-			{
-				"code":	"3",
-				"value":	"Cross-sectoral mechanisms",
-				"description":	"ITMOs that cannot be associated to a specific sector since they are the net flow of mitigation outcomes coming from a different mechanism."
-			},
-			{
-				"code":	"4",
-				"value":	"Energy generation",
-				"description":	"Wind farms, offshore wind power, solar farms, hydroelectric plants, geothermal heating and cooling solutions or biomass energy, etc."
-			},
-			{
-				"code":	"5",
-				"value":	"Forestry and land use",
-				"description":	"Mangrove restoration, seagrass plantation, urban forestry and green spaces development, peatland restoration and conservation, soil carbon enhancement, land-use planning for reduced urban sprawl."
-			},
-			{
-				"code":	"6",
-				"value":	"Industrial processes",
-				"description":	"Fuel switching, carbon capture and storage (CCS), green chemistry, waste gas and heat recovery."
-			},
-			{
-				"code":	"7",
-				"value":	"Transportation",
-				"description":	"Hydrogen fuel cell vehicles and refueling infrastructure, sustainable biofuels for aviation and shipping, electric public transit systems, active transport infrastructure (bike lanes, pedestrian zones), smart logistics and freight transport efficiency."
-			},
-			{
-				"code":	"8",
-				"value":	"Urban development",
-				"description":	"Vegetative cover, afforestation, permeable surfaces, green roofs, rain gardens, bioretention swales, natural and constructed wetlands, converting abandoned industrial sites into urban parks."
-			},
-			{
-				"code":	"9",
-				"value":	"Waste management",
-				"description":	"Methane capture from landfills, waste-to-energy projects, Advanced recycling technologies, Biogas generation from organic waste, Circular economy models for industries (sharing, repairing, recycling), and the reduction of organic waste through composting and anaerobic digestion."
-			}
-		],
+		"type":	"string",
 		"required":	"true"
 	},
+
 	"ActivityType":
 	{
 		"attribute":	"Activity Type",
 		"description":	"The mitigation activity type(s) from which the ITMOs were generated.",
-		"AEF fields":
-		[
-			"Activity Type(s)"
-		],
+		"AEF fields":	"not applicable",
 		"requiredBy":
 		[
 			"Decision 6/CMA.4 paragraph 17 (j)"
@@ -846,161 +1129,6 @@
 			}
 		],
 		"required":	"true"
-	},
-	"MitigationType":
-	{
-		"attribute":	"Mitigation type",
-		"description":	"\"Emission reductions\", \"Removals\", \"Emission reductions and removals\".",
-		"AEF fields":
-		[
-			"Mitigation type"
-		],
-		"requiredBy":
-		[
-			"6.2/CMA15, Annex II, Table 3"
-		],
-		"type": "string",
-		"definedValues":
-		[
-			{
-				"code":	"1",
-				"value":	"Emission reductions",
-				"description":	"Emission reductions only"
-			},
-			{
-				"code":	"2",
-				"value":	"Removals",
-				"description":	"Removals only"
-			},
-			{
-				"code":	"3",
-				"value":	"Emission reductions and removals",
-				"description":	"Both emission reductions and removals"
-			}
-		],
-		"required":	"true"
-	},
-	"ActionType":
-	{
-		"attribute":	"Action Type",
-		"description":	"Actions to be reported by Partipating Parties, pursuant Decision 2/CMA.3, Annex, paragraph 20(a), paragraph 29.",
-		"AEF fields":
-		[
-			"Action type"
-		],
-		"requiredBy":
-		[
-			"Decision 6/CMA.4 paragraph 17 (j)",
-			"Decision 2/CMA.3, Annex, paragraph 20(a), paragraph 29."
-		],
-		"type":	"string",
-		"definedValues":
-		[
-			{
-				"code":	"1",
-				"value":	"Authorization",
-				"description":	"Used when reporting the authorization of an ITMO."
-			},
-			{
-				"code":	"2",
-				"value":	"First transfer",
-				"description":	"Used when reporting the international transfer of an ITMO."
-			},
-			{
-				"code":	"3",
-				"value":	"Transfer",
-				"description":	"Used when reporting the international transfer of an ITMO."
-			},
-			{
-				"code":	"4",
-				"value":	"Acquisition",
-				"description":	"Used when reporting the international acquisition of an ITMO."
-			},
-			{
-				"code":	"5",
-				"value":	"Use",
-				"description":	"Used when reporting the use of an ITMO."
-			},
-			{
-				"code":	"6",
-				"value":	"Cancellation",
-				"description":	"Used when reporting the cancellation of an ITMO."
-			},
-			{
-				"code":	"7",
-				"value":	"Voluntary Cancellation",
-				"description":	"Used when reporting the cancellation of an ITMO."
-			}
-		],
-		"required":	"true"
-	},
-	"PurposeForAuthorization":
-	{
-		"attribute":	"Purpose for Authorization",
-		"description":	"Purpose for authorization of ITMOs",
-		"AEF fields":
-		[
-			"Purposes for authorization"
-		],
-		"requiredBy":
-		[
-			"Decision 6/CMA.4 paragraph 17 (j)"
-		],
-		"type":	"string",
-		"definedValues":
-		[
-			{
-				"code":	"1",
-				"value":	"NDC",
-				"description":	"ITMOs that are authorized to be used towards NDC (nationally determined contribution) achievement."
-			},
-			{
-				"code":	"2",
-				"value":	"OIMP",
-				"description":	"ITMOs that are authorized to be used for cancelled for OIMP (other international mitigation purposes)."
-			},
-			{
-				"code":	"3",
-				"value":	"IMP",
-				"description":	"ITMOs that are authorized to be used for cancelled for IMP (international mitigation purposes)."
-			},
-			{
-				"code":	"4",
-				"value":	"OP",
-				"description":	"ITMOs that are authorized to be used for cancelled for OP (other purposes)."
-			},
-			{
-				"code":	"5",
-				"value":	"NDC and OIMP",
-				"description":	"ITMOs that are authorized to be used towards NDC (nationally determined contribution) achievement;\nand be used or cancelled for OIMP (other international mitigation purposes)."
-			},
-			{
-				"code":	"6",
-				"value":	"NDC and IMP",
-				"description":	"ITMOs that are authorized to be used towards NDC (nationally determined contribution) achievement;\nand be used or cancelled for IMP (international mitigation purposes)."
-			},
-			{
-				"code":	"7",
-				"value":	"NDC and OP",
-				"description":	"ITMOs that are authorized to be used towards NDC (nationally determined contribution) achievement;\nand be used or cancelled for OP (other purposes)."
-			}
-		],
-		"required":	"true"
-	},
-	"Purpose":
-	{
-		"attribute":	"Purpose",
-		"description":	"Purpose for which ITMO has been used towards IMP or cancelled for OP.\nOnly applicable to action types \"Use\" and \"Cancellation\".",
-		"AEF fields":
-		[
-			"Purposes for which ITMO has been used towards or cancelled for OIMP"
-		],
-		"requiredBy":
-		[
-			"Decision 6/CMA.4 paragraph 17 (j)"
-		],
-		"type":	"string",
-		"required":	"false"
 	},
 
 	"AccountType":
