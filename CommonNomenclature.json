@@ -1,3 +1,4 @@
+
 {
 	"CommonNomenclature":
 	{
@@ -39,7 +40,14 @@
 			"QuantityCO2",
 			"QuantityNon-GHG",
 			"MitigationType",
-			"Vintage"
+			"Vintage",
+			
+			"AuthorizedEntityName",
+			"AuthorizedEntityCountryOfIncorporation",
+			"AuthorizedEntityID",
+			"AuthorizedEntityConditions",
+			"AuthorizedEntityChangeConditions",
+			"AuthorizedEntityAdditionalInformation"
 		]
 	},
 
@@ -65,11 +73,11 @@
 		"required":	"true"
 	},
 	"SubmissionVersion":
-		{
-		"attribute":	"SubmissionVersion",
+	{
+		"attribute":	"Submission version",
 		"AEF fields":
 		[
-		  "Version"
+		  "Submission: Version"
 		],
 		"requiredBy":
 		[
@@ -80,11 +88,11 @@
 		"required":	"true"
 	},
 	"ReportedYear":
-		{
-		"attribute":	"ReportedYear",
+	{
+		"attribute":	"Reported year",
 		"AEF fields":
 		[
-		  "Reported year"
+		  "Submission: Reported year"
 		],
 		"requiredBy":
 		[
@@ -96,20 +104,108 @@
 		"maximum": 2040,
 		"required":	"true"
 	},
-	
-	"CooperativeApproach":
+	"DateOfSubmission":
 	{
-		"attribute":	"Cooperative Approach",
-		"description":	"Cooperative approaches under Article 6.2.\nThe format of the string is \"CANNNN\" where the \"CA\" is the fixed prefix, and NNNN is a four-digit integer, that shall be incremented by one for each additional agreed cooperative approach, and added to this common nomenclature.",
+		"attribute":	"Date of submission",
 		"AEF fields":
 		[
-			"Cooperative approach"
+		  "Submission: Date of submission"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"The date of the AEF submission.\nThe format is \"dd/mm/yyyy\".",
+		"type":	"string",
+		"required":	"true"
+	},
+	"FirstYearOfNDCPeriod":
+	{
+		"attribute":	"First year of the NDC implementation period",
+		"AEF fields":
+		[
+		  "Submission: First year of the NDC implementation period"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"The four-digit year that is the first year of the Party's NDC implementation period.",
+		"type":	"integer",
+		"minimum": 2020,
+		"maximum": 2040,
+		"required":	"true"
+	},
+	"LastYearOfNDCPeriod":
+	{
+		"attribute":	"Last year of the NDC implementation period",
+		"AEF fields":
+		[
+		  "Submission: Last year of the NDC implementation period"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"The four-digit year that is the last year of the Party's NDC implementation period.",
+		"type":	"integer",
+		"minimum": 2020,
+		"maximum": 2040,
+		"required":	"true"
+	},
+	
+	"AuthorizationID":
+	{
+		"attribute":	"Authorization ID",
+		"AEF fields":
+		[
+			"Authorizations: Authorization ID",
+			"Actions: Authorization ID",
+			"Holdings: Authorization ID"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"The Authorization ID as assigned by the reporting Party.\nAuthorization IDs can only contain alphanumeric, space, and hyphen characters.",
+		"type":
+		[
+			"string" 
+		],
+		"required":	"true"
+	},
+	"DateOfAuthorization":
+	{
+		"AEF fields":
+		[
+		  "Authorization: Date of authorization",
+		  "Authorized entities: Date of the authorization"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"attribute":	"Date of authorization",
+		"description":	"The date on which the authorization was issued.  The format is \"dd/mm/yyyy\".",
+		"type":	"string",
+		"required":	"true"
+	},
+	"CooperativeApproachID":
+	{
+		"attribute":	"Cooperative Approach ID",
+		"AEF fields":
+		[
+			"Authorizations: Cooperative approach ID",
+			"Actions: Cooperative approach ID",
+			"Holdings: Cooperative approach ID",
+			"Authorized entities: Cooperative approach ID"
 		],
 		"requiredBy":
 		[
 			"Decision 6/CMA.4 Annex I, paragraph 5",
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
+		"description":	"A unique identifier of one of the cooperative approaches under Article 6.2.\nThe format of the string is \"CANNNN\" where the \"CA\" is the fixed prefix, and NNNN is a four-digit integer, that shall be incremented by one for each additional agreed cooperative approach, and added to this common nomenclature.",
 		"type": "string",
 		"definedValues":
 		[
@@ -280,18 +376,54 @@
 		],
 		"required":	"true"
 	},
-	"Metric":
+	"AuthorizationVersion":
 	{
-		"attribute":	"Metric",
-		"description":	"The metric used to measure the ITMO",
+		"attribute":	"Authorization version",
 		"AEF fields":
 		[
-			"Metric"
+		  "Authorizations: Version of the authorization"
 		],
 		"requiredBy":
 		[
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
+		"description":	"The version number of the authorization.  This is an integer.",
+		"type":	"integer",
+		"required":	"true"
+	},
+	"AuthorizedQuantity":
+	{
+		"attribute":	"Authorized quantity",
+		"description":	"This field is optional. It may be used to specify the maximum quantity of mitigation outcomes that are authorized for use towards an NDC and/or OIMP.",
+		"AEF fields":
+		[
+			"Authorizations: Authorized quantity"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"type": "integer",
+		"minimum": "1",
+		"maximum": "999999999",
+		"required":	"false"
+	},
+
+
+	"Metric":
+	{
+		"attribute":	"Metric",
+		"AEF fields":
+		[
+			"Authorizations: Metric",
+			"Actions: Metric",
+			"Holdings: Metric"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"The metric used to measure the ITMO.\nMust be either \"GHG\" or \"non-GHG\".",
 		"type": "string",
 		"definedValues":
 		[
