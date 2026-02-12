@@ -617,7 +617,7 @@
 		],
 		"required":	"false"
 	},
-	"AuthorizedEntitiess":
+	"AuthorizedEntityIDs":
 	{
 		"attribute":	"Authorized Entities",
 		"AEF fields":
