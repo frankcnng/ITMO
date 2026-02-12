@@ -29,12 +29,12 @@ jobs:
         with:
           python-version: '3.13'
       # Uncomment to generate docx (currently doesn't work)
-      #- run: pip install python-docx
-      #- run: python nom2docx.py -n CommonNomenclature.json -t CommonNomenclatureTemplate.docx -o CommonNomenclature.docx
-      # Uncomment to generate PDF (takes ca 10 mins)
-      #- uses: jmservera/libreoffice-action@v0.2
-      #  with:
-      #    command: libreoffice --headless --invisible --convert-to pdf 'CommonNomenclature.docx' --outdir '.'
+      - run: pip install python-docx
+      - run: python nom2docx.py -n CommonNomenclature.json -t CommonNomenclatureTemplate.docx -o CommonNomenclature.docx
+       Uncomment to generate PDF (takes ca 10 mins)
+      - uses: jmservera/libreoffice-action@v0.2
+        with:
+          command: libreoffice --headless --invisible --convert-to pdf 'CommonNomenclature.docx' --outdir '.'
       - uses: EndBug/add-and-commit@v9
         with:
           add: |
@@ -43,6 +43,6 @@ jobs:
             - diagrams/*.png
             - diagrams/*.svg
             # Uncomment to generate docx (currently doesn't work)
-            #- CommonNomenclature.docx
-            # Uncomment to generate PDF (takes ca 10 mins)
-            #- CommonNomenclature.pdf
+            - CommonNomenclature.docx
+             Uncomment to generate PDF (takes ca 10 mins)
+            - CommonNomenclature.pdf
