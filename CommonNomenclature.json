@@ -54,8 +54,7 @@
 			"AuthorizedEntityCountryOfIncorporation",
 			"AuthorizedEntityID",
 			"AuthorizedEntityConditions",
-			"AuthorizedEntityChangeConditions",
-			"AuthorizedEntityAdditionalInformation"
+			"AuthorizedEntityChangeConditions"
 		]
 	},
 
