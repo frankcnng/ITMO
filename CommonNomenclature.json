@@ -28,6 +28,7 @@
 			"AuthorizedTimeframe",
 			"AuthorizationT&Cs",
 			"FirstTransferDefnForOIMP",
+			"AdditionalExplanatoryInformation",
 
 			"ActionDateTime",
 			"ActionType",
@@ -49,7 +50,6 @@
 			"Using/cancellingPartyID",
 			"Using/cancellingEntityID",
 			"YearITMOUsedTowardsNDC",
-			"AdditionalInfoForAction",
 			
 			"AuthorizedEntityName",
 			"AuthorizedEntityCountryOfIncorporation",
@@ -714,146 +714,39 @@
 		],
 		"required":	"false"
 	},
-
-	"FirstID":
+	"AdditionalExplanatoryInformation":
 	{
+		"attribute":	"Additional explanatory information",
 		"AEF fields":
 		[
-			"First ID"
+			"Authorizations: Additional explanatory information"
+			"Actions: Additional explanatory information"
 		],
 		"requiredBy":
 		[
-			"Decision 6/CMA.4 Annex I, paragraph 5",
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"attribute":	"First ID",
-		"description":	"Identifier of the first ITMO in the block, commencing with First ID, ending with Last ID.\nBlocks from the same Originating Party Registry cannot overlap.",
-		"type":	"integer",
-		"minimum":	"1",
-		"maximum":	"999999999",
-		"required":	"true"
-	},
-	"LastID":
-	{
-		"AEF fields":
-		[
-			"Last ID"
-		],
-		"requiredBy":
-		[
-			"Decision 6/CMA.4 Annex I, paragraph 5",
-			"Decision 6/CMA.4 paragraph 17 (j)"
-		],
-		"attribute":	"Last ID",
-		"description":	"Identifier of the last ITMO in the block, commencing with First ID, ending with Last ID.\nBlocks from the same Originating Party Registry cannot overlap.",
-		"type":	"integer",
-		"minimum":	"1",
-		"maximum":	"999999999",
-		"required":	"true"
-	},
-	"FirstTransferringParty":
-	{
-		"AEF fields":
-		[
-			"First transferring participating Party ID.\nNote that ITMO may exist before first transfer, thus this field is optional."
-		],
-		"requiredBy":
-		[
-			"Decision 6/CMA.4 Annex I, paragraph 5",
-			"Decision 6/CMA.4 paragraph 17 (j)"
-		],
-		"attribute":	"First Transferring Party",
-		"description":	"ISO-3166-1 alpha-3 code of participating Party in which the authorized mitigation outcome occurred as per common nomenclatures.",
+		"description":	"This field is optional. The Party may use this field to provide any additional information.",
 		"type":	"string",
 		"required":	"false"
 	},
-	"FirstTransfer":
-	{
-		"attribute":	"First Transfer",
-		"description":	"Definition of \"first transfer\" pursuant to decision, 2/CMA.3, Annex, paragraph 2.\nTherefore defines the \"First Transferring Party.\".",
-		"AEF fields":
-		[
-			"Definition of \"First transferring participating Party ID\"."
-		],
-		"requiredBy":
-		[
-			"Definition of \"First Transferring Party\"."
-		],
-		"type":	"string",
-		"definedValues":
-		[
-			{
-				"code":	"1",
-				"value":	"First international transfer",
-				"description":	"First transfer defined for ITMOs that are authorized for NDC pursuant 2 (a), Annex, 2/CMA.3. "
-			},
-			{
-				"code":	"2",
-				"value":	"Authorisation",
-				"description":	"First transfer defined for ITMOs that are authorized for OIMP pursuant 2 (b)(1) Authorisation, Annex, 2/CMA.3."
-			},
-			{
-				"code":	"3",
-				"value":	"Issuance",
-				"description":	"First transfer defined for ITMOs that are authorized for OIMP pursuant 2 (b)(2) Issuance, Annex, 2/CMA.3."
-			},
-			{
-				"code":	"4",
-				"value":	"Use or Cancellation",
-				"description":	"First transfer defined for ITMOs that are authorized for OIMP pursuant 2 (b)(3) Use or Cancellation, Annex, 2/CMA.3."
-			}
-		],
-		"required":	"false"
-	},
-	"QuantityCO2":
-	{
-		"attribute":	"Quantity CO2",
-		"description":	"Quantity of ITMOs in metric tons of CO2 equivalent.",
-		"AEF fields":
-		[
-			"Quantity (t CO2 eq)"
-		],
-		"requiredBy":
-		[
-			"Decision 6/CMA.4 paragraph 17 (j)"
-		],
-		"type": "integer",
-		"minimum": "1",
-		"maximum": "999999999",
-		"required":	"true"
-	},
-	"QuantityNon-GHG":
-	{
-		"attribute":	"Quantity non-GHG",
-		"description":	"Quantity of ITMOs in the respective non-GHG metric. This field should be reported as ‘Not applicable’ (NA) if the ITMOs are in a GHG metric.",
-		"AEF fields":
-		[
-			"Quantity (in non-GHG metric)"
-		],
-		"requiredBy":
-		[
-			"Decision 6/CMA.4 paragraph 17 (j)"
-		],
-		"type": "integer",
-		"minimum": "1",
-		"maximum": "999999999",
-		"required":	"false"
-	},
 
-
+	"ActionDateTime":
+	{
+	},
 	"ActionType":
 	{
 		"attribute":	"Action Type",
-		"description":	"Actions to be reported by Partipating Parties, pursuant Decision 2/CMA.3, Annex, paragraph 20(a), paragraph 29.",
 		"AEF fields":
 		[
-			"Action type"
+			"Actions: Action type"
 		],
 		"requiredBy":
 		[
 			"Decision 6/CMA.4 paragraph 17 (j)",
 			"Decision 2/CMA.3, Annex, paragraph 20(a), paragraph 29."
 		],
+		"description":	"Actions to be reported by Partipating Parties, pursuant Decision 2/CMA.3, Annex, paragraph 20(a), paragraph 29.",
 		"type":	"string",
 		"definedValues":
 		[
@@ -895,12 +788,133 @@
 		],
 		"required":	"true"
 	},
+	"ActionSubtype":
+	{
+	},
+	"FirstTransferringPartyID":
+	{
+		"attribute":	"First transferring Party ID"
+		"AEF fields":
+		[
+			"Actions: First transferring participating Party ID",
+			"Holdings: First transferring participating Party ID"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 Annex I, paragraph 5",
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"ISO-3166-1 alpha-3 code of participating Party in which the authorized mitigation outcome occurred.",
+		"type":	"string",
+		"required":	"true"
+	},
+	"PartyITMORegistryID":
+	{
+		"attribute":	"Party ITMO registry ID"
+		"AEF fields":
+		[
+			"Actions: Party ITMO registry ID",
+			"Holdings: Party ITMO registry ID"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 Annex I, paragraph 5",
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"When reporting Actions, the unique identifier of the Party ITMO registry in which the reported action has been tracked;\nWhen reporting Holdings, the unique identifier of the Party ITMO registry in which the ITMOs are held.",
+		"type":	"string",
+		"required":	"true"
+	},
+	"FirstID":
+	{
+		"AEF fields":
+		[
+			"Actions: First ID"
+			"Holdings: First ID"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 Annex I, paragraph 5",
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"attribute":	"First ID",
+		"description":	"Identifier of the first ITMO in the block, commencing with First ID, ending with Last ID.\nBlocks from the same Originating Party Registry cannot overlap.",
+		"type":	"integer",
+		"minimum":	"1",
+		"maximum":	"999999999",
+		"required":	"true"
+	},
+	"LastID":
+	{
+		"AEF fields":
+		[
+			"Actions: Last ID"
+			"Holdings: Last ID"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 Annex I, paragraph 5",
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"attribute":	"Last ID",
+		"description":	"Identifier of the last ITMO in the block, commencing with First ID, ending with Last ID.\nBlocks from the same Originating Party Registry cannot overlap.",
+		"type":	"integer",
+		"minimum":	"1",
+		"maximum":	"999999999",
+		"required":	"true"
+	},
+	"UnderlyingUnitRegistryID":
+	{
+	},
+	"UnderlyingUnitFirstUnitID":
+	{
+	},
+	"UnderlyingUnitLastUnitID":
+	{
+	},
+	"QuantityCO2":
+	{
+		"attribute":	"Quantity CO2",
+		"AEF fields":
+		[
+			"Actions: Quantity (t CO2 eq)",
+			"Holdings: Quantity (t CO2 eq)"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"Quantity of ITMOs in metric tons of CO2 equivalent.",
+		"type": "integer",
+		"minimum": "1",
+		"maximum": "999999999",
+		"required":	"true"
+	},
+	"QuantityNon-GHG":
+	{
+		"attribute":	"Quantity non-GHG",
+		"AEF fields":
+		[
+			"Actions: Quantity (in non-GHG metric)",
+			"Holdings: Quantity (in non-GHG metric)"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"Quantity of ITMOs in the respective non-GHG metric. This field should be reported as ‘Not applicable’ (NA) if the ITMOs are in a GHG metric.",
+		"type": "integer",
+		"minimum": "1",
+		"maximum": "999999999",
+		"required":	"false"
+	},
 	"MitigationType":
 	{
 		"attribute":	"Mitigation type",
 		"AEF fields":
 		[
-			"Mitigation type"
+			"Actions: Mitigation type",
+			"Holdings: Mitigation type"
 		],
 		"requiredBy":
 		[
@@ -932,7 +946,8 @@
 	{
 		"AEF fields":
 		[
-			"Vintage"
+			"Actions: Vintage",
+			"Holdings: Vintage"
 		],
 		"requiredBy":
 		[
@@ -946,9 +961,15 @@
 		"maximum":	"9999",
 		"required":	"true"
 	},
-	"PurposeForOIMP":
+	"TransferringPartyID":
 	{
-		"attribute":	"Purpose for OIMP",
+	},
+	"AcquiringPartyID":
+	{
+	},
+	"PurposeITMOUsedForOIMP":
+	{
+		"attribute":	"Purpose ITMO used for OIMP",
 		"AEF fields":
 		[
 			"Actions: Purposes for which ITMO has been used towards or cancelled for OIMP"
@@ -961,8 +982,70 @@
 		"type":	"string",
 		"required":	"false"
 	},
+	"Using/cancellingPartyID":
+	{
+	},
+	"Using/cancellingEntityID":
+	{
+	},
+	"YearITMOUsedTowardsNDC":
+	{
+	},
 
+	"AuthorizedEntityName":
+	{
+	},
+	"AuthorizedEntityCountryOfIncorporation":
+	{
+	},
+	"AuthorizedEntityID":
+	{
+	},
+	"AuthorizedEntityConditions":
+	{
+	},
+	"AuthorizedEntityChangeConditions":
+	{
+	},
+	"AuthorizedEntityAdditionalInformation":
+	{
+	},
 
+	"FirstTransfer":
+	{
+		"attribute":	"First Transfer",
+		"description":	"Definition of \"first transfer\" pursuant to decision, 2/CMA.3, Annex, paragraph 2.\nTherefore defines the \"First Transferring Party.\".",
+		"AEF fields": "not applicable",
+		"requiredBy":
+		[
+			"Definition of \"First Transferring Party\"."
+		],
+		"type":	"string",
+		"definedValues":
+		[
+			{
+				"code":	"1",
+				"value":	"First international transfer",
+				"description":	"First transfer defined for ITMOs that are authorized for NDC pursuant 2 (a), Annex, 2/CMA.3. "
+			},
+			{
+				"code":	"2",
+				"value":	"Authorisation",
+				"description":	"First transfer defined for ITMOs that are authorized for OIMP pursuant 2 (b)(1) Authorisation, Annex, 2/CMA.3."
+			},
+			{
+				"code":	"3",
+				"value":	"Issuance",
+				"description":	"First transfer defined for ITMOs that are authorized for OIMP pursuant 2 (b)(2) Issuance, Annex, 2/CMA.3."
+			},
+			{
+				"code":	"4",
+				"value":	"Use or Cancellation",
+				"description":	"First transfer defined for ITMOs that are authorized for OIMP pursuant 2 (b)(3) Use or Cancellation, Annex, 2/CMA.3."
+			}
+		],
+		"required":	"false"
+	},
 	"OriginatingPartyRegistry":
 	{
 		"attribute":	"Originating Party Registry",
@@ -976,7 +1059,6 @@
 		"type":	"string",
 		"required":	"true"
 	},
-
 	"ActivityType":
 	{
 		"attribute":	"Activity Type",
@@ -1130,7 +1212,6 @@
 		],
 		"required":	"true"
 	},
-
 	"AccountType":
 	{
 		"attribute":	"Account Type",
