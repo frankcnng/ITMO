@@ -477,7 +477,7 @@
 		[
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"description":	"Type of non-GHG metric applied (e.g., ‘megawatt hours of renewable electricity generation’). This field should be reported as ‘Not applicable’ (NA) if the ITMOs are in a GHG metric.",
+		"description":	"Type of non-GHG metric applied (e.g., ‘megawatt hours of renewable electricity generation’). This field should be reported as ‘Not applicable’ (NA), or left blank, if the ITMOs are in a GHG metric.",
 		"type": "string",
 		"required":	"false"
 	},
@@ -692,7 +692,7 @@
 		[
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"description":	"This field is only applicable to authorizations for use towards OIMP. This field specifies the first transfer definition used by the Party pursuant to decision 2/CMA.3, annex, para. 2(b). In other cases, this field is reported as ‘Not applicable’ (NA).",
+		"description":	"This field is only applicable to authorizations for use towards OIMP. This field specifies the first transfer definition used by the Party pursuant to decision 2/CMA.3, annex, para. 2(b). In other cases, this field is reported as ‘Not applicable’ (NA) or left blank.",
 		"type":	"string",
 		"definedValues":
 		[
@@ -719,8 +719,9 @@
 		"attribute":	"Additional explanatory information",
 		"AEF fields":
 		[
-			"Authorizations: Additional explanatory information"
-			"Actions: Additional explanatory information"
+			"Authorizations: Additional explanatory information",
+			"Actions: Additional explanatory information",
+			"Authorized entities: Additional explanatory information"
 		],
 		"requiredBy":
 		[
@@ -733,7 +734,7 @@
 
 	"ActionDateTime":
 	{
-		"attribute":	"Action date-time"
+		"attribute":	"Action date-time",
 		"AEF fields":
 		[
 			"Actions: Action date-time"
@@ -872,7 +873,7 @@
 	},
 	"FirstTransferringPartyID":
 	{
-		"attribute":	"First transferring Party ID"
+		"attribute":	"First transferring Party ID",
 		"AEF fields":
 		[
 			"Actions: First transferring participating Party ID",
@@ -883,13 +884,13 @@
 			"Decision 6/CMA.4 Annex I, paragraph 5",
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"description":	"ISO-3166-1 alpha-3 code of participating Party in which the authorized mitigation outcome occurred.",
+		"description":	"ISO-3166-1 alpha-3 code of the participating Party in which the authorized mitigation outcome occurred.",
 		"type":	"string",
 		"required":	"true"
 	},
 	"PartyITMORegistryID":
 	{
-		"attribute":	"Party ITMO registry ID"
+		"attribute":	"Party ITMO registry ID",
 		"AEF fields":
 		[
 			"Actions: Party ITMO registry ID",
@@ -900,7 +901,7 @@
 			"Decision 6/CMA.4 Annex I, paragraph 5",
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"description":	"When reporting Actions, the unique identifier of the Party ITMO registry in which the reported action has been tracked;\nWhen reporting Holdings, the unique identifier of the Party ITMO registry in which the ITMOs are held.",
+		"description":	"When reporting Actions, the unique identifier of the Party ITMO registry in which the reported action has been tracked;\nWhen reporting Holdings, the unique identifier of the Party ITMO registry in which the ITMOs are held.\nRegistry identifiers consist of the ISO-3166-1 alpha-3 code of its participating Party, and a unique two digit registry identifier within the participating Party.",
 		"type":	"string",
 		"required":	"true"
 	},
@@ -909,7 +910,7 @@
 		"attribute":	"First ID",
 		"AEF fields":
 		[
-			"Actions: First ID"
+			"Actions: First ID",
 			"Holdings: First ID"
 		],
 		"requiredBy":
@@ -928,7 +929,7 @@
 		"attribute":	"Last ID",
 		"AEF fields":
 		[
-			"Actions: Last ID"
+			"Actions: Last ID",
 			"Holdings: Last ID"
 		],
 		"requiredBy":
@@ -955,13 +956,13 @@
 			"Decision 6/CMA.4 paragraph 17 (j)",
 			"Decision 2/CMA.3, Annex, paragraph 20(a), paragraph 29."
 		],
-		"description":	"Unique identifier of the underlying cooperative approach registry (or carbon crediting programme).\nThis field should be reported as ‘Not applicable’ (NA) if the cooperative approach does not use an underlying cooperative approach registry.",
+		"description":	"Unique identifier of the underlying cooperative approach registry (or carbon crediting programme).\nThis field should be reported as ‘Not applicable’ (NA), or left blank, if the cooperative approach does not use an underlying cooperative approach registry.",
 		"type":	"string",
 		"definedValues":
 		[
 			{
 				"value":	"VCS",
-				"description":	"Verified Carbon Standard"
+				"description":	"Verified Carbon Standard",
 				"cooperative approaches":
 				[
 					"CA0009",
@@ -971,7 +972,7 @@
 			},
 			{
 				"value":	"GS",
-				"description":	"Gold Standard"
+				"description":	"Gold Standard",
 				"cooperative approaches":
 				[
 					"CA0011",
@@ -981,7 +982,7 @@
 			},
 			{
 				"value":	"CAR",
-				"description":	"Climate Action Reserve"
+				"description":	"Climate Action Reserve",
 				"cooperative approaches":
 				[
 				],
@@ -989,7 +990,7 @@
 			},
 			{
 				"value":	"ACR",
-				"description":	"American Carbon Registry"
+				"description":	"American Carbon Registry",
 				"cooperative approaches":
 				[
 				],
@@ -997,7 +998,7 @@
 			},
 			{
 				"value":	"ART",
-				"description":	"Architecture for REDD+ Transactions"
+				"description":	"Architecture for REDD+ Transactions",
 				"cooperative approaches":
 				[
 					"CA0005"
@@ -1006,7 +1007,7 @@
 			},
 			{
 				"value":	"GCC",
-				"description":	"Global Carbon Council"
+				"description":	"Global Carbon Council",
 				"cooperative approaches":
 				[
 				],
@@ -1014,7 +1015,7 @@
 			},
 			{
 				"value":	"Cercarbono",
-				"description":	"Cercarbono"
+				"description":	"Cercarbono",
 				"cooperative approaches":
 				[
 				],
@@ -1022,7 +1023,7 @@
 			},
 			{
 				"value":	"Isometric",
-				"description":	"Isometric"
+				"description":	"Isometric",
 				"cooperative approaches":
 				[
 				],
@@ -1030,7 +1031,7 @@
 			},
 			{
 				"value":	"ISFL",
-				"description":	"Biocarbon Fund Initiative for Sustainable Forest Landscapes"
+				"description":	"Biocarbon Fund Initiative for Sustainable Forest Landscapes",
 				"cooperative approaches":
 				[
 				],
@@ -1038,7 +1039,7 @@
 			},
 			{
 				"value":	"FCPF",
-				"description":	"Forest Carbon Parnership Facility"
+				"description":	"Forest Carbon Parnership Facility",
 				"cooperative approaches":
 				[
 				],
@@ -1046,7 +1047,7 @@
 			},
 			{
 				"value":	"T-VER",
-				"description":	"Thailand Voluntary Emission Reduction Programme"
+				"description":	"Thailand Voluntary Emission Reduction Programme",
 				"cooperative approaches":
 				[
 				],
@@ -1054,7 +1055,7 @@
 			},
 			{
 				"value":	"JCM",
-				"description":	"Joint Crediting Mechanism"
+				"description":	"Joint Crediting Mechanism",
 				"cooperative approaches":
 				[
 					"CA0007",
@@ -1073,8 +1074,8 @@
 		"attribute":	"Underlying unit unique identifier first unit ID",
 		"AEF fields":
 		[
-			"Actions:	First unit ID"
-			"Holdings:	First unit ID"
+			"Actions: First unit ID",
+			"Holdings: First unit ID"
 		],
 		"requiredBy":
 		[
@@ -1092,8 +1093,8 @@
 		"attribute":	"Underlying unit unique identifier last unit ID",
 		"AEF fields":
 		[
-			"Actions:	Last unit ID"
-			"Holdings:	Last unit ID"
+			"Actions: Last unit ID",
+			"Holdings: Last unit ID"
 		],
 		"requiredBy":
 		[
@@ -1136,7 +1137,7 @@
 		[
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"description":	"Quantity of ITMOs in the respective non-GHG metric. This field should be reported as ‘Not applicable’ (NA) if the ITMOs are in a GHG metric.",
+		"description":	"Quantity of ITMOs in the respective non-GHG metric. This field should be reported as ‘Not applicable’ (NA), or left blank, if the ITMOs are in a GHG metric.",
 		"type": "integer",
 		"minimum": "1",
 		"maximum": "999999999",
@@ -1178,6 +1179,7 @@
 	},
 	"Vintage":
 	{
+		"attribute":	"Vintage",
 		"AEF fields":
 		[
 			"Actions: Vintage",
@@ -1188,7 +1190,6 @@
 			"Decision 6/CMA.4 Annex I, paragraph 5",
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"attribute":	"Vintage",
 		"description":	"Year in which mitigation outcome occured.",
 		"type":	"integer",
 		"minimum":	"2021",
@@ -1197,9 +1198,35 @@
 	},
 	"TransferringPartyID":
 	{
+		"attribute":	"Transferring Party ID",
+		"AEF fields":
+		[
+			"Actions: Transferring participating Party ID"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 Annex I, paragraph 5",
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"ISO-3166-1 alpha-3 code of the transferring participating Party or, where the transfer occurs from the Adaptation Fund to a Party, a unique identifier for the Adaptation Fund.\nThis field is only applicable to the action type ‘acquisition’.\nIn other cases, this field is reported as ‘Not applicable’ (NA) or left blank.",
+		"type":	"string",
+		"required":	"false"
 	},
 	"AcquiringPartyID":
 	{
+		"attribute":	"Acquiring Party ID",
+		"AEF fields":
+		[
+			"Actions: Acquiring participating Party ID"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 Annex I, paragraph 5",
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"ISO-3166-1 alpha-3 code of the acquiring participating Party, or where the acquisition occurs by the Adaptation Fund, a unique identifier for the Adaptation Fund.\nThis field is applicable to the action types ‘first transfer’ and ‘transfer’.\nIn other cases, this field is reported as ‘Not applicable’ (NA) or left blank.",
+		"type":	"string",
+		"required":	"false"
 	},
 	"PurposeITMOUsedForOIMP":
 	{
@@ -1212,48 +1239,146 @@
 		[
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"description":	"This field is completed to specify the purpose for which the ITMO has been first transferred for use towards international mitigation purposes (IMP), cancelled for other purposes (OP) or cancelled for purposes referred to in paragraph 20(a), annex, decision 2/CMA.3. This field is only applicable to the action types ‘use’, ‘first transfer’ and ‘cancellation’. In other cases, this field is reported as Not applicable’ (NA).",
+		"description":	"This field specifies the purpose for which the ITMO has been first transferred for use towards international mitigation purposes (IMP), cancelled for other purposes (OP) or cancelled for purposes referred to in paragraph 20(a), annex, decision 2/CMA.3.\nThis field is only applicable to the action types ‘use’, ‘first transfer’ and ‘cancellation’. In other cases, this field is reported as Not applicable’ (NA) or left blank.",
 		"type":	"string",
 		"required":	"false"
 	},
 	"Using/cancellingPartyID":
 	{
+		"attribute":	"Using/cancelling Party ID",
+		"AEF fields":
+		[
+			"Actions: Using/cancelling participating Party ID"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 Annex I, paragraph 5",
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"ISO-3166-1 alpha-3 code of the using or cancelling participating Party.\nThis field is only applicable to report a use for IMP or cancellation for OP.\nIn other cases, this field is reported as ‘Not applicable’ (NA) or left blank.",
+		"type":	"string",
+		"required":	"false"
 	},
 	"Using/cancellingEntityID":
 	{
+		"attribute":	"Using/cancelling authorized entity ID",
+		"AEF fields":
+		[
+			"Actions: Using/cancelling authorized entity ID"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 Annex I, paragraph 5",
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"ISO-3166-1 alpha-3 code of using or cancelling authorized entity.\nThis field is only applicable to report the use or cancellation of authorized mitigation outcomes or ITMOs by authorized entities.\nIn other cases, this field is reported as ‘Not applicable’ (NA) or left blank.",
+		"type":	"string",
+		"required":	"false"
 	},
 	"YearITMOUsedTowardsNDC":
 	{
+		"attribute":	"Year ITMO used towards NDC",
+		"AEF fields":
+		[
+			"Actions: Calendar year for which the ITMOs are used towards the Party's NDC"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 Annex I, paragraph 5",
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"The calendar year for which the ITMOs are used towards an NDC.\nThis field is only applicable for use of ITMOs towards the Party’s NDC.\nIn other cases, this field is reported as ‘Not applicable’ (NA) or left blank.",
+		"type":	"integer",
+		"minimum":	"2021",
+		"maximum":	"9999",
+		"required":	"false"
 	},
 
 	"AuthorizedEntityName":
 	{
+		"attribute":	"Authorized entity name",
+		"AEF fields":
+		[
+			"Authorized Entities: Name"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"Name of the authorized entity.",
+		"type":	"string",
+		"required":	"true"
 	},
 	"AuthorizedEntityCountryOfIncorporation":
 	{
+		"attribute":	"Authorized entity country of incorporation",
+		"AEF fields":
+		[
+			"Authorized Entities: Country of incorporation"
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"ISO-3166-1 alpha-3 code of the country in which the authorized entity is incorporated.",
+		"type":	"string",
+		"required":	"true"
 	},
 	"AuthorizedEntityID":
 	{
+		"attribute":	"Authorized entity identification",
+		"AEF fields":
+		[
+			"Authorized Entities: Identification number."
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"Identification number of the authorized entity within its country of incorporation.",
+		"type":	"string",
+		"required":	"true"
 	},
 	"AuthorizedEntityConditions":
 	{
+		"attribute":	"Authorized entity conditions",
+		"AEF fields":
+		[
+			"Authorized Entities: conditions."
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"This field is optional.\nThe conditions under which the authorization was provided, as applicable.",
+		"type":	"string",
+		"required":	"flase"
 	},
 	"AuthorizedEntityChangeConditions":
 	{
-	},
-	"AuthorizedEntityAdditionalInformation":
-	{
+		"attribute":	"Authorized entity change and revocation conditions",
+		"AEF fields":
+		[
+			"Authorized Entities: Change and revocation conditions."
+		],
+		"requiredBy":
+		[
+			"Decision 6/CMA.4 paragraph 17 (j)"
+		],
+		"description":	"This field is optional.\nWhether the authorization could be changed or revoked and under which conditions",
+		"type":	"string",
+		"required":	"flase"
 	},
 
 	"FirstTransfer":
 	{
 		"attribute":	"First Transfer",
-		"description":	"Definition of \"first transfer\" pursuant to decision, 2/CMA.3, Annex, paragraph 2.\nTherefore defines the \"First Transferring Party.\".",
 		"AEF fields": "not applicable",
 		"requiredBy":
 		[
 			"Definition of \"First Transferring Party\"."
 		],
+		"description":	"Definition of \"first transfer\" pursuant to decision, 2/CMA.3, Annex, paragraph 2.\nTherefore defines the \"First Transferring Party.\".",
 		"type":	"string",
 		"definedValues":
 		[
@@ -1283,25 +1408,25 @@
 	"OriginatingPartyRegistry":
 	{
 		"attribute":	"Originating Party Registry",
-		"description":	"The registry identifier of the registry that prepared the ITMO for first transfer.",
 		"AEF fields": "not applicable",
 		"requiredBy":
 		[
 			"Decision 6/CMA.4 Annex I, paragraph 5",
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
+		"description":	"The registry identifier of the registry that prepared the ITMO for first transfer.\nRegistry identifiers consist of the ISO-3166-1 alpha-3 code of its participating Party, and a unique two digit registry identifier within the participating Party.",
 		"type":	"string",
 		"required":	"true"
 	},
 	"ActivityType":
 	{
 		"attribute":	"Activity Type",
-		"description":	"The mitigation activity type(s) from which the ITMOs were generated.",
 		"AEF fields":	"not applicable",
 		"requiredBy":
 		[
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
+		"description":	"The mitigation activity type(s) from which the ITMOs were generated.",
 		"type":
 		[
 			"string" 
@@ -1449,13 +1574,13 @@
 	"AccountType":
 	{
 		"attribute":	"Account Type",
-		"description":	"Minimum Account Types supported by the mechanism registry, under Article 6.4, Decision 7.CMA.4, Annex I - paragraph 32",
 		"AEF fields": "not applicable",
 		"type": "integer",
 		"requiredBy":
 		[
 			"TBD"
 		],
+		"description":	"Minimum Account Types supported by the mechanism registry, under Article 6.4, Decision 7.CMA.4, Annex I - paragraph 32",
 		"definedValues":
 		[
 			{
@@ -1469,12 +1594,12 @@
 	"UnitType":
 	{
 		"attribute":	"Unit Type",
-		"description":	"Article 6 unit types",
 		"AEF fields": "not applicable",
 		"requiredBy":
 		[
 			"TBD"
 		],
+		"description":	"Article 6 unit types",
 		"type":	"integer",
 		"definedValues":
 		[
