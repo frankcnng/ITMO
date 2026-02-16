@@ -1,5 +1,6 @@
 import json
 import argparse
+import sys
 
 from docx import Document
 from docx.enum.text import WD_BREAK, WD_LINE_SPACING
@@ -133,6 +134,10 @@ parser.add_argument("-o", "--output", dest="output",
                     default="CommonNomenclature.docx")
 args = parser.parse_args()
 
+args.nomenclature=r"C:/Users/Halleux/OneDrive - United Nations Framework Convention on Climate Change/Official/CommonNomenclature.json"
+args.template=r"C:/Users/Halleux/OneDrive - United Nations Framework Convention on Climate Change/Official/CommonNomenclatureTemplate.docx"
+args.output=r"C:/Users/Halleux/OneDrive - United Nations Framework Convention on Climate Change/Official/CommonNomenclature.docx"
+
 with open(args.nomenclature,"r") as jsonfile:
     contents=json.loads(jsonfile.read())
 
@@ -140,6 +145,15 @@ doc=Document(args.template)
 
 tnb=0
 for n in contents['CommonNomenclature']['contents']:
+    # Check availability of definition
+    try:
+        _ = contents[n]
+    except KeyError as ke:
+        print(ke,"is defined in contents but is missing a definition")
+        print()
+        print("Halting processing")
+        sys.exit(1)
+
     tnb=tnb+1
     # Metadata
     # Table caption and title
@@ -175,7 +189,9 @@ for n in contents['CommonNomenclature']['contents']:
     row[1].text=contents[n]['required']
     row=table.rows[5].cells
     row[0].text='Naming in AEF'
-    row[1].text=contents[n]['AEF fields']
+    aef=''
+    for naef in contents[n]['AEF fields']: aef=aef+naef+"\n"
+    row[1].text=aef[:-1]
     row=table.rows[6].cells
     row[0].text='Technical name'
     row[1].text=n
