@@ -227,7 +227,7 @@
 			},
 			{
 				"value":	"CA0004",
-				"description":	"Electrification of Vanuatu’s Inhabited Islands through Solar Power ITMO Programme (between Switzerland and Vanuatu)"
+				"description":	"Electrification of Vanuatu's Inhabited Islands through Solar Power ITMO Programme (between Switzerland and Vanuatu)"
 			},
 			{
 				"value":	"CA0005",
@@ -279,7 +279,7 @@
 			},
 			{
 				"value":	"CA0017",
-				"description":	"Joint Crediting Mechanism between the Government of Japan and the People’s Republic of Bangladesh"
+				"description":	"Joint Crediting Mechanism between the Government of Japan and the People's Republic of Bangladesh"
 			},
 			{
 				"value":	"CA0018",
@@ -475,7 +475,7 @@
 		[
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"description":	"Type of non-GHG metric applied (e.g., ‘megawatt hours of renewable electricity generation’). This field should be reported as ‘Not applicable’ (NA), or left blank, if the ITMOs are in a GHG metric.",
+		"description":	"Type of non-GHG metric applied (e.g., ‘megawatt hours of renewable electricity generation'). This field should be reported as ‘Not applicable' (NA), or left blank, if the ITMOs are in a GHG metric.",
 		"type": "string",
 		"required":	"false"
 	},
@@ -690,7 +690,7 @@
 		[
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"description":	"This field is only applicable to authorizations for use towards OIMP. This field specifies the first transfer definition used by the Party pursuant to decision 2/CMA.3, annex, para. 2(b). In other cases, this field is reported as ‘Not applicable’ (NA) or left blank.",
+		"description":	"This field is only applicable to authorizations for use towards OIMP. This field specifies the first transfer definition used by the Party pursuant to decision 2/CMA.3, annex, para. 2(b). In other cases, this field is reported as ‘Not applicable' (NA) or left blank.",
 		"type":	"string",
 		"definedValues":
 		[
@@ -954,7 +954,7 @@
 			"Decision 6/CMA.4 paragraph 17 (j)",
 			"Decision 2/CMA.3, Annex, paragraph 20(a), paragraph 29."
 		],
-		"description":	"Unique identifier of the underlying cooperative approach registry (or carbon crediting programme).\nThis field should be reported as ‘Not applicable’ (NA), or left blank, if the cooperative approach does not use an underlying cooperative approach registry.",
+		"description":	"Unique identifier of the underlying cooperative approach registry (or carbon crediting programme).\nThis field should be reported as ‘Not applicable' (NA), or left blank, if the cooperative approach does not use an underlying cooperative approach registry.",
 		"type":	"string",
 		"definedValues":
 		[
@@ -1135,7 +1135,7 @@
 		[
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"description":	"Quantity of ITMOs in the respective non-GHG metric. This field should be reported as ‘Not applicable’ (NA), or left blank, if the ITMOs are in a GHG metric.",
+		"description":	"Quantity of ITMOs in the respective non-GHG metric. This field should be reported as ‘Not applicable' (NA), or left blank, if the ITMOs are in a GHG metric.",
 		"type": "integer",
 		"minimum": "1",
 		"maximum": "999999999",
@@ -1206,7 +1206,7 @@
 			"Decision 6/CMA.4 Annex I, paragraph 5",
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"description":	"ISO-3166-1 alpha-3 code of the transferring participating Party or, where the transfer occurs from the Adaptation Fund to a Party, a unique identifier for the Adaptation Fund.\nThis field is only applicable to the action type ‘acquisition’.\nIn other cases, this field is reported as ‘Not applicable’ (NA) or left blank.",
+		"description":	"ISO-3166-1 alpha-3 code of the transferring participating Party or, where the transfer occurs from the Adaptation Fund to a Party, a unique identifier for the Adaptation Fund.\nThis field is only applicable to the action type ‘acquisition'.\nIn other cases, this field is reported as ‘Not applicable' (NA) or left blank.",
 		"type":	"string",
 		"required":	"false"
 	},
@@ -1222,7 +1222,7 @@
 			"Decision 6/CMA.4 Annex I, paragraph 5",
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"description":	"ISO-3166-1 alpha-3 code of the acquiring participating Party, or where the acquisition occurs by the Adaptation Fund, a unique identifier for the Adaptation Fund.\nThis field is applicable to the action types ‘first transfer’ and ‘transfer’.\nIn other cases, this field is reported as ‘Not applicable’ (NA) or left blank.",
+		"description":	"ISO-3166-1 alpha-3 code of the acquiring participating Party, or where the acquisition occurs by the Adaptation Fund, a unique identifier for the Adaptation Fund.\nThis field is applicable to the action types ‘first transfer' and ‘transfer'.\nIn other cases, this field is reported as ‘Not applicable' (NA) or left blank.",
 		"type":	"string",
 		"required":	"false"
 	},
@@ -1237,7 +1237,7 @@
 		[
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"description":	"This field specifies the purpose for which the ITMO has been first transferred for use towards international mitigation purposes (IMP), cancelled for other purposes (OP) or cancelled for purposes referred to in paragraph 20(a), annex, decision 2/CMA.3.\nThis field is only applicable to the action types ‘use’, ‘first transfer’ and ‘cancellation’. In other cases, this field is reported as Not applicable’ (NA) or left blank.",
+		"description":	"This field specifies the purpose for which the ITMO has been first transferred for use towards international mitigation purposes (IMP), cancelled for other purposes (OP) or cancelled for purposes referred to in paragraph 20(a), annex, decision 2/CMA.3.\nThis field is only applicable to the action types ‘use', ‘first transfer' and ‘cancellation'. In other cases, this field is reported as Not applicable' (NA) or left blank.",
 		"type":	"string",
 		"required":	"false"
 	},
@@ -1253,7 +1253,7 @@
 			"Decision 6/CMA.4 Annex I, paragraph 5",
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"description":	"ISO-3166-1 alpha-3 code of the using or cancelling participating Party.\nThis field is only applicable to report a use for IMP or cancellation for OP.\nIn other cases, this field is reported as ‘Not applicable’ (NA) or left blank.",
+		"description":	"ISO-3166-1 alpha-3 code of the using or cancelling participating Party.\nThis field is only applicable to report a use for IMP or cancellation for OP.\nIn other cases, this field is reported as ‘Not applicable' (NA) or left blank.",
 		"type":	"string",
 		"required":	"false"
 	},
@@ -1269,7 +1269,7 @@
 			"Decision 6/CMA.4 Annex I, paragraph 5",
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"description":	"ISO-3166-1 alpha-3 code of using or cancelling authorized entity.\nThis field is only applicable to report the use or cancellation of authorized mitigation outcomes or ITMOs by authorized entities.\nIn other cases, this field is reported as ‘Not applicable’ (NA) or left blank.",
+		"description":	"ISO-3166-1 alpha-3 code of using or cancelling authorized entity.\nThis field is only applicable to report the use or cancellation of authorized mitigation outcomes or ITMOs by authorized entities.\nIn other cases, this field is reported as ‘Not applicable' (NA) or left blank.",
 		"type":	"string",
 		"required":	"false"
 	},
@@ -1285,7 +1285,7 @@
 			"Decision 6/CMA.4 Annex I, paragraph 5",
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"description":	"The calendar year for which the ITMOs are used towards an NDC.\nThis field is only applicable for use of ITMOs towards the Party’s NDC.\nIn other cases, this field is reported as ‘Not applicable’ (NA) or left blank.",
+		"description":	"The calendar year for which the ITMOs are used towards an NDC.\nThis field is only applicable for use of ITMOs towards the Party's NDC.\nIn other cases, this field is reported as ‘Not applicable' (NA) or left blank.",
 		"type":	"integer",
 		"minimum":	"2021",
 		"maximum":	"9999",
