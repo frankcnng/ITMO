@@ -1582,10 +1582,40 @@
 		"definedValues":
 		[
 			{
-				"value":	"100",
-				"description":	"Holding."
+				"code":	"100",
+				"value":	"Holding",
+				"description":	"Authorised MOs are registered to 100 Holding accounts.\nITMOs are transferred to and from 100 Holding accounts.\nSee decision 2/CMA.3, annex, para. 29.\nNote: if a participating Party registry requires Pending and/or Authorized entity holding accounts, or additional types of holding accounts, it is its responsibility to determine how it will identify these account subtypes within its registry, as long as it transfers ITMOs to and from other registries using 100 Holding accounts.\nAlso, Pending, Holding, Party holding, Authorized entity holding, and Share of proceeds of adaptation accounts in the Art 6.4 mechanism registry are 100 Holding accounts from the point of view of these standards (see decision 3/CMA.3, annex, paras. 58, 60 and 63)."
+			},
+			{
+				"code":	"200",
+				"value":	"Use towards NDC",
+				"description":	"When an ITMO is used towards NDC, it is transferred from a 100 Holding account to a 200 Use towards NDC account located in the same registry.\nSee decision 2/CMA.3, annex, para. 29."
+			},
+			{
+				"code":	"210",
+				"value":	"Use towards international mitigation purposes (IMP)",
+				"description":	"When an ITMO is used towards IMP, it is transferred from a 100 Holding account to a 210 Use towards international mitigation purposes (IMP) located in the same registry.\nSee decision 2/CMA.3, annex, para. 29 and decision 4/CMA.6, annex, table 3, footnote u."
+			},
+			{
+				"code":	"300",
+				"value":	"Cancellation for other purposes (OP)",
+				"description":	"When an ITMO is cancelled for other purposes (OP), it is transferred from a 100 Holding account to a 300 Cancellation for other purposes (OP) account located in the same registry.\nSee decision 2/CMA.3, annex, para. 29 and decision 4/CMA.6, annex, table 3, footnote u."
+			},
+			{
+				"code":	"310",
+				"value":	"Voluntary cancellation of ITMOs not counted towards NDC or OIMP, for OMGE",
+				"description":	"When ITMOs not counted towards NDC or OIMP are voluntarily cancelled for OMGE, it is transferred from a 100 Holding account to a 310 Voluntary cancellation of ITMOs not counted towards NDC or OIMP, for OMGE, located in the same registry.\nSee decision 2/CMA.3, annex, para. 39."
+			},
+			{
+				"code":	"320",
+				"value":	"Voluntary cancellation",
+				"description":	"When an ITMO is cancelled voluntarily for another reason than the ones specified in account type 300, 310 and 330, it is transferred from a 100 Holding account to a 320 Voluntary cancellation account, account located in the same registry.\nSee decision 2/CMA.3, annex, para. 29 and decision 3/CMA.3, annex, para. 61."
+			},
+			{
+				"code":	"330",
+				"value":	"Administrative cancellation",
+				"description":	"When an ITMO is cancelled for administrative reasons, it is transferred from a 100 Holding account to a 330 Administrative cancellation account located in the same registry.\nSee decision 2/CMA.3, annex, para. 29."
 			}
-
 		],
 		"required":	"false"
 	},
