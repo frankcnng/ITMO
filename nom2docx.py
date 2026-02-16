@@ -134,9 +134,9 @@ parser.add_argument("-o", "--output", dest="output",
                     default="CommonNomenclature.docx")
 args = parser.parse_args()
 
-args.nomenclature=r"C:/Users/Halleux/OneDrive - United Nations Framework Convention on Climate Change/Official/CommonNomenclature.json"
-args.template=r"C:/Users/Halleux/OneDrive - United Nations Framework Convention on Climate Change/Official/CommonNomenclatureTemplate.docx"
-args.output=r"C:/Users/Halleux/OneDrive - United Nations Framework Convention on Climate Change/Official/CommonNomenclature.docx"
+#args.nomenclature=r"C:/Users/Halleux/OneDrive - United Nations Framework Convention on Climate Change/Official/CommonNomenclature.json"
+#args.template=r"C:/Users/Halleux/OneDrive - United Nations Framework Convention on Climate Change/Official/CommonNomenclatureTemplate.docx"
+#args.output=r"C:/Users/Halleux/OneDrive - United Nations Framework Convention on Climate Change/Official/CommonNomenclature.docx"
 
 with open(args.nomenclature,"r") as jsonfile:
     contents=json.loads(jsonfile.read())
