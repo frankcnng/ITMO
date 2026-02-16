@@ -54,7 +54,13 @@
 			"AuthorizedEntityCountryOfIncorporation",
 			"AuthorizedEntityID",
 			"AuthorizedEntityConditions",
-			"AuthorizedEntityChangeConditions"
+			"AuthorizedEntityChangeConditions",
+			
+			"FirstTransfer",
+			"OriginatingPartyRegistry",
+			"ActivityType",
+			"AccountType",
+			"UnitType"
 		]
 	},
 
