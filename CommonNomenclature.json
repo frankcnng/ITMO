@@ -1632,7 +1632,7 @@
 		[
 			{
 				"value":	"1",
-				"description":	"ITMO.\nInternationally Transferred Mitigation Outcome.\nIncluding authorized A6.4 ERs.\nAdditional information of ITMOs are hosted in the CARP."
+				"description":	"ITMO.\nInternationally Transferred Mitigation Outcome, including authorized A6.4 ERs.\nAdditional information of ITMOs are hosted in the CARP."
 			},
 			{
 				"value":	"2",
