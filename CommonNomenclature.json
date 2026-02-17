@@ -1632,15 +1632,15 @@
 		[
 			{
 				"value":	"1",
-				"description":	"ITMO.\nInternationally Transferred Mitigation Outcome, including authorized A6.4 ERs.\nAdditional information of ITMOs are hosted in the CARP."
+				"description":	"ITMO\nInternationally Transferred Mitigation Outcome, including authorized A6.4 ERs.\nAdditional information of ITMOs are hosted in the CARP."
 			},
 			{
 				"value":	"2",
-				"description":	"A6.4ER.\nUnauthorized A6.4 ER.\nAdditional information of A6.4ERs are hosted in the Mechanism Registry."
+				"description":	"Unauthorized A6.4ER\nUnauthorized A6.4 ER.\nAdditional information of A6.4ERs are hosted in the Mechanism Registry."
 			},
 			{
 				"value":	"3",
-				"description":	"MO.\nUnauthorised Mitigation Outcome.\nUnauthorised MOs are held in participating Party systems. These may be Party registries or registry sections provided by the International Registry."
+				"description":	"Mitigation Outcome (before authorization)\nUnauthorised Mitigation Outcome."
 			},
 			{
 				"value":	"4",
