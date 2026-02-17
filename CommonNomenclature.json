@@ -1636,7 +1636,7 @@
 			},
 			{
 				"value":	"2",
-				"description":	"Unauthorized A6.4ER\nUnauthorized A6.4 ER.\nAdditional information of A6.4ERs are hosted in the Mechanism Registry."
+				"description":	"Unauthorized A6.4ER\nUnauthorized Article 6.4 Emission Reduction.\nAdditional information of A6.4ERs are hosted in the Mechanism Registry."
 			},
 			{
 				"value":	"3",
@@ -1644,15 +1644,15 @@
 			},
 			{
 				"value":	"4",
-				"description":	"AMO.\nAuthorized Mitigation Outcome.\nAdditional information of AMOs are hosted in the CARP."
+				"description":	"AMO\nAuthorized Mitigation Outcome.\nAdditional information of AMOs are hosted in the CARP."
 			},
 			{
 				"value":	"5",
-				"description":	"CER.\nArticle 6.4 Emission Reduction Unit from Certified Emission Reduction.\nAdditional information of CERs are hosted in the Mechanism Registry."
+				"description":	"CER\nArticle 6.4 Emission Reduction Unit from Certified Emission Reduction.\nAdditional information of CERs are hosted in the Mechanism Registry."
 			},
 			{
 				"value":	"6",
-				"description":	"MCU.\nMigration Contribution Units.\nAdditional information of MCUs are hosted in the Mechanism Registry."
+				"description":	"MCU\nMigration Contribution Units.\nAdditional information of MCUs are hosted in the Mechanism Registry."
 			}
 		],
 		"required":	"false"
