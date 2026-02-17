@@ -1377,7 +1377,7 @@
 	"FirstTransfer":
 	{
 		"attribute":	"First Transfer",
-		"AEF fields": "not applicable",
+		"AEF fields": ["not applicable"],
 		"requiredBy":
 		[
 			"Definition of \"First Transferring Party\"."
@@ -1412,7 +1412,7 @@
 	"OriginatingPartyRegistry":
 	{
 		"attribute":	"Originating Party Registry",
-		"AEF fields": "not applicable",
+		"AEF fields": ["not applicable"],
 		"requiredBy":
 		[
 			"Decision 6/CMA.4 Annex I, paragraph 5",
@@ -1425,7 +1425,7 @@
 	"ActivityType":
 	{
 		"attribute":	"Activity Type",
-		"AEF fields":	"not applicable",
+		"AEF fields":	["not applicable"],
 		"requiredBy":
 		[
 			"Decision 6/CMA.4 paragraph 17 (j)"
@@ -1578,7 +1578,7 @@
 	"AccountType":
 	{
 		"attribute":	"Account Type",
-		"AEF fields": "not applicable",
+		"AEF fields": ["not applicable"],
 		"type": "integer",
 		"requiredBy":
 		[
@@ -1621,7 +1621,7 @@
 	"UnitType":
 	{
 		"attribute":	"Unit Type",
-		"AEF fields": "not applicable",
+		"AEF fields": ["not applicable"],
 		"requiredBy":
 		[
 			"TBD"
