@@ -1588,32 +1588,32 @@
 		"definedValues":
 		[
 			{
-				"value":	"100-Holding",
-				"description":	"Authorised MOs are registered to 100 Holding accounts.\nITMOs are transferred to and from 100 Holding accounts.\nSee decision 2/CMA.3, annex, para. 29.\nNote: if a participating Party registry requires Pending and/or Authorized entity holding accounts, or additional types of holding accounts, it is its responsibility to determine how it will identify these account subtypes within its registry, as long as it transfers ITMOs to and from other registries using 100 Holding accounts.\nAlso, Pending, Holding, Party holding, Authorized entity holding, and Share of proceeds of adaptation accounts in the Art 6.4 mechanism registry are 100 Holding accounts from the point of view of these standards (see decision 3/CMA.3, annex, paras. 58, 60 and 63)."
+				"value":	"100",
+				"description":	"Holding:\nAuthorised MOs are registered to 100 Holding accounts.\nITMOs are transferred to and from 100 Holding accounts.\nSee decision 2/CMA.3, annex, para. 29.\nNote: if a participating Party registry requires Pending and/or Authorized entity holding accounts, or additional types of holding accounts, it is its responsibility to determine how it will identify these account subtypes within its registry, as long as it transfers ITMOs to and from other registries using 100 Holding accounts.\nAlso, Pending, Holding, Party holding, Authorized entity holding, and Share of proceeds of adaptation accounts in the Art 6.4 mechanism registry are 100 Holding accounts from the point of view of these standards (see decision 3/CMA.3, annex, paras. 58, 60 and 63)."
 			},
 			{
-				"value":	"200-Use towards NDC",
-				"description":	"When an ITMO is used towards NDC, it is transferred from a 100 Holding account to a 200 Use towards NDC account located in the same registry.\nSee decision 2/CMA.3, annex, para. 29."
+				"value":	"200",
+				"description":	"Use towards NCD:\nWhen an ITMO is used towards NDC, it is transferred from a 100 Holding account to a 200 Use towards NDC account located in the same registry.\nSee decision 2/CMA.3, annex, para. 29."
 			},
 			{
-				"value":	"210-Use towards international mitigation purposes (IMP)",
-				"description":	"When an ITMO is used towards IMP, it is transferred from a 100 Holding account to a 210 Use towards international mitigation purposes (IMP) located in the same registry.\nSee decision 2/CMA.3, annex, para. 29 and decision 4/CMA.6, annex, table 3, footnote u."
+				"value":	"210",
+				"description":	"Use towards international mitigation purposes (IMP):\nWhen an ITMO is used towards IMP, it is transferred from a 100 Holding account to a 210 Use towards international mitigation purposes (IMP) located in the same registry.\nSee decision 2/CMA.3, annex, para. 29 and decision 4/CMA.6, annex, table 3, footnote u."
 			},
 			{
-				"value":	"300-Cancellation for other purposes (OP)",
-				"description":	"When an ITMO is cancelled for other purposes (OP), it is transferred from a 100 Holding account to a 300 Cancellation for other purposes (OP) account located in the same registry.\nSee decision 2/CMA.3, annex, para. 29 and decision 4/CMA.6, annex, table 3, footnote u."
+				"value":	"300",
+				"description":	"Cancellation for other purposes (OP):\nWhen an ITMO is cancelled for other purposes (OP), it is transferred from a 100 Holding account to a 300 Cancellation for other purposes (OP) account located in the same registry.\nSee decision 2/CMA.3, annex, para. 29 and decision 4/CMA.6, annex, table 3, footnote u."
 			},
 			{
-				"value":	"310-Voluntary cancellation of ITMOs not counted towards NDC or OIMP, for OMGE",
-				"description":	"When ITMOs not counted towards NDC or OIMP are voluntarily cancelled for OMGE, it is transferred from a 100 Holding account to a 310 Voluntary cancellation of ITMOs not counted towards NDC or OIMP, for OMGE, located in the same registry.\nSee decision 2/CMA.3, annex, para. 39."
+				"value":	"310",
+				"description":	"Voluntary cancellation of ITMOs not counted towards NDC or OIMP, for OMGE:\nWhen ITMOs not counted towards NDC or OIMP are voluntarily cancelled for OMGE, it is transferred from a 100 Holding account to a 310 Voluntary cancellation of ITMOs not counted towards NDC or OIMP, for OMGE, located in the same registry.\nSee decision 2/CMA.3, annex, para. 39."
 			},
 			{
-				"value":	"320-Voluntary cancellation",
-				"description":	"When an ITMO is cancelled voluntarily for another reason than the ones specified in account type 300, 310 and 330, it is transferred from a 100 Holding account to a 320 Voluntary cancellation account, account located in the same registry.\nSee decision 2/CMA.3, annex, para. 29 and decision 3/CMA.3, annex, para. 61."
+				"value":	"320",
+				"description":	"Voluntary cancellation:\nWhen an ITMO is cancelled voluntarily for another reason than the ones specified in account type 300, 310 and 330, it is transferred from a 100 Holding account to a 320 Voluntary cancellation account, account located in the same registry.\nSee decision 2/CMA.3, annex, para. 29 and decision 3/CMA.3, annex, para. 61."
 			},
 			{
-				"value":	"330-Administrative cancellation",
-				"description":	"When an ITMO is cancelled for administrative reasons, it is transferred from a 100 Holding account to a 330 Administrative cancellation account located in the same registry.\nSee decision 2/CMA.3, annex, para. 29."
+				"value":	"330",
+				"description":	"Administrative cancellation:\nWhen an ITMO is cancelled for administrative reasons, it is transferred from a 100 Holding account to a 330 Administrative cancellation account located in the same registry.\nSee decision 2/CMA.3, annex, para. 29."
 			}
 		],
 		"required":	"false"
@@ -1631,28 +1631,28 @@
 		"definedValues":
 		[
 			{
-				"value":	"00-MO",
-				"description":	"Unauthorised Mitigation Outcome"
+				"value":	"1",
+				"description":	"ITMO: Internationally Transferred Mitigation Outcome.\nIncluding authorized A6.4 ER.\nAdditional information of ITMOs are hosted in the CARP."
 			},
 			{
-				"value":	"01-MO",
-				"description":	"Authorised Mitigation Outcome"
+				"value":	"2",
+				"description":	"A6.4ER: Unauthorized A6.4 ER.\nAdditional information of A6.4ERs are hosted in the Mechanism Registry."
 			},
 			{
-				"value":	"62-ITMO",
-				"description":	"Internationally Transferred Mitigation Outcome"
+				"value":	"3",
+				"description":	"MO: Unauthorised Mitigation Outcome.\nUnauthorised MOs are held in participating Party systems. These may be Party registries or registry sections provided by the International Registry."
 			},
 			{
-				"value":	"64-A6.4ER",
-				"description":	"Article 6.4 Emission Reduction Unit"
+				"value":	"4",
+				"description":	"AMO: Authorized Mitigation Outcome.\nAdditional information of AMOs are hosted in the CARP."
 			},
 			{
-				"value":	"65-A6.4ER (from CER)",
-				"description":	"Article 6.4 Emission Reduction Unit from Certified Emission Reduction."
+				"value":	"5",
+				"description":	"CER: Article 6.4 Emission Reduction Unit from Certified Emission Reduction.\nAdditional information of CERs are hosted in the Mechanism Registry."
 			},
 			{
-				"value":	"67-MCU",
-				"description":	"Migration Contribution Units"
+				"value":	"6",
+				"description":	"MCU: Migration Contribution Units.\nAdditional information of MCUs are hosted in the Mechanism Registry."
 			}
 		],
 		"required":	"false"
