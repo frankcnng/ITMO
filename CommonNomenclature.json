@@ -1418,7 +1418,7 @@
 			"Decision 6/CMA.4 Annex I, paragraph 5",
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"description":	"The registry identifier of the registry that registered the unit (as an authorised mitigation outcome.\nRegistry identifiers consist of the ISO-3166-1 alpha-3 code of its participating Party, and a unique two digit registry identifier within the participating Party.",
+		"description":	"The registry identifier of the registry that registered the unit (as an authorised mitigation outcome).\nRegistry identifiers consist of the ISO-3166-1 alpha-3 code of its participating Party, and a unique two digit registry identifier within the participating Party.",
 		"type":	"string",
 		"required":	"true"
 	},
