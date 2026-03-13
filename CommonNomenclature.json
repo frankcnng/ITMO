@@ -212,8 +212,8 @@
 		],
 		"requiredBy":
 		[
-			"Decision 6/CMA.4 Annex I, paragraph 5",
-			"Decision 6/CMA.4 paragraph 17 (j)"
+			"Decision 6/CMA.4, Annex I, paragraph 5",
+			"Decision 6/CMA.4, paragraph 17(j)"
 		],
 		"description":	"A unique identifier of one of the cooperative approaches under Article 6.2.\nThe format of the string is \"CANNNN\" where the \"CA\" is the fixed prefix, and NNNN is a four-digit integer, that shall be incremented by one for each additional agreed cooperative approach, and added to this common nomenclature.",
 		"type": "string",
@@ -560,7 +560,8 @@
 		],
 		"requiredBy":
 		[
-			"Decision 6/CMA.4 paragraph 17 (j)"
+			"Decision 6/CMA.4, paragraph 17(j)",
+			"Decision 6/CMA.4, Annex VII"
 		],
 		"description":	"Purpose for authorization of ITMOs",
 		"type":	"string",
