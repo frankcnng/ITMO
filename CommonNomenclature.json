@@ -81,7 +81,7 @@
 		[
 			"Decision 6/CMA.4 paragraph 17 (j)"
 		],
-		"description":	"Standard codes for identifying participating parties under Article 6.2 of the Paris Agreement.\nISO-3166-1 alpha-3 code of the Party's country.\nExceptionally reserved code elements, such as EUE for the European Union, are also allowed.",
+		"description":	"Standard codes for identifying participating parties under Article 6.2 of the Paris Agreement.\nISO-3166-1 alpha-3 code of the Party's country.\nExceptionally reserved code elements are defined:\n- XEU - for the European Union, and\n- XMR - for the Article 6.4 Mechanism Registry.",
 		"type":	"string",
 		"required":	"true"
 	},
@@ -215,172 +215,172 @@
 			"Decision 6/CMA.4, Annex I, paragraph 5",
 			"Decision 6/CMA.4, paragraph 17(j)"
 		],
-		"description":	"A unique identifier of one of the cooperative approaches under Article 6.2.\nThe format of the string is \"CANNNN\" where the \"CA\" is the fixed prefix, and NNNN is a four-digit integer, that shall be incremented by one for each additional agreed cooperative approach, and added to this common nomenclature.",
+		"description":	"A unique identifier of one of the cooperative approaches under Article 6.2.\nThe format of the string is \"CANNNNNN\" where the \"CA\" is the fixed prefix, and NNNNNN is a six-digit integer, that shall be incremented by one for each additional agreed cooperative approach, and added to this common nomenclature.\nNote that previously a defined format of Cooperative Approach ID was \"CANNNN\" with a four-digit integer.  As such,\n- Cooperative Approach IDs with four-digits will continue to be recognised, and\n- Cooperative Approach IDs with four-digits and those with six-digits with the same integer values are considered identical.  For example \"CA0001\" and \"CA000001\" are considered identical.",
 		"type": "string",
 		"definedValues":
 		[
 			{
-				"value":	"CA0001",
+				"value":	"CA000001",
 				"description":	"Article 6.4 mechanism (between Parties to the Paris Agreement)"
 			},
 			{
-				"value":	"CA0002",
+				"value":	"CA000002",
 				"description":	"Promotion of climate smart agriculture practices for sustainable rice cultivation in Ghana (between Ghana and Switzerland)"
 			},
 			{
-				"value":	"CA0003",
+				"value":	"CA000003",
 				"description":	"Operation of e-buses on privately owned, scheduled public bus routes in the Bangkok Metropolitan area by Energy Absolute / Implementing Agreement to the Paris Agreement between the Kingdom of Thailand and the Swiss Confederation (between Switzerland and Thailand)"
 			},
 			{
-				"value":	"CA0004",
+				"value":	"CA000004",
 				"description":	"Electrification of Vanuatu's Inhabited Islands through Solar Power ITMO Programme (between Switzerland and Vanuatu)"
 			},
 			{
-				"value":	"CA0005",
+				"value":	"CA000005",
 				"description":	"Emissions Reductions from Sustainable Management of Forests (by Guyana)"
 			},
 			{
-				"value":	"CA0006",
+				"value":	"CA000006",
 				"description":	"ITMOs resulting from Paris Agreement Article 5.2: reducing emissions from deforestation and forest degradation, and the role of conservation, sustainable management of forests and enhancement of forest carbon stocks (by Suriname)"
 			},
 			{
-				"value":	"CA0007",
+				"value":	"CA000007",
 				"description":	"Joint Crediting Mechanism between the government of Japan and the government of the Kingdom of Thailand"
 			},
 			{
-				"value":	"CA0008",
+				"value":	"CA000008",
 				"description":	"The Joint Crediting Mechanism (JCM), established under the 'Low Carbon Development Partnership' between the Governments of Mongolia and Japan, operates in accordance with Article 6 of the Paris Agreement"
 			},
 			{
-				"value":	"CA0009",
+				"value":	"CA000009",
 				"description":	"Grouped Projects for Cambodia Improved Cookstove"
 			},
 			{
-				"value":	"CA0010",
+				"value":	"CA000010",
 				"description":	"Grouped Projects for Cambodia Water Purifier"
 			},
 			{
-				"value":	"CA0011",
+				"value":	"CA000011",
 				"description":	"Cicada Clean Cooking Zimbabwe"
 			},
 			{
-				"value":	"CA0012",
+				"value":	"CA000012",
 				"description":	"The Joint Crediting Mechanism between the Government of Maldives and the Government of Japan"
 			},
 			{
-				"value":	"CA0013",
+				"value":	"CA000013",
 				"description":	"BIOMASS ENERGY FOR CONSERVATION PROGRAMME (GS11677)"
 			},
 			{
-				"value":	"CA0014",
+				"value":	"CA000014",
 				"description":	"The Joint Crediting Mechanism between the Government of Palau and the Government of Japan"
 			},
 			{
-				"value":	"CA0015",
+				"value":	"CA000015",
 				"description":	"The Joint Crediting Mechanism between the Government of the Republic of Tunisia and the Government of Japan"
 			},
 			{
-				"value":	"CA0016",
+				"value":	"CA000016",
 				"description":	"Reducing emissions from deforestation and forest degradation, and the role of conservation, sustainable management of forests and enhancement of forest carbon stocks (REDD+)"
 			},
 			{
-				"value":	"CA0017",
+				"value":	"CA000017",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the People's Republic of Bangladesh"
 			},
 			{
-				"value":	"CA0018",
+				"value":	"CA000018",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the Federal Democratic Republic of Ethiopia"
 			},
 			{
-				"value":	"CA0019",
+				"value":	"CA000019",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the Republic of Kenya"
 			},
 			{
-				"value":	"CA0020",
+				"value":	"CA000020",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the Socialist Republic of Viet Nam"
 			},
 			{
-				"value":	"CA0021",
+				"value":	"CA000021",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the Lao People's Democratic Republic"
 			},
 			{
-				"value":	"CA0022",
+				"value":	"CA000022",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the Republic of Indonesia"
 			},
 			{
-				"value":	"CA0023",
+				"value":	"CA000023",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the Republic of Costa Rica"
 			},
 			{
-				"value":	"CA0024",
+				"value":	"CA000024",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the Kingdom of Cambodia"
 			},
 			{
-				"value":	"CA0025",
+				"value":	"CA000025",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the United Mexican States (Mexico)"
 			},
 			{
-				"value":	"CA0026",
+				"value":	"CA000026",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the Republic of Chile"
 			},
 			{
-				"value":	"CA0027",
+				"value":	"CA000027",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the Republic of the Philippines"
 			},
 			{
-				"value":	"CA0028",
+				"value":	"CA000028",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the Republic of Senegal"
 			},
 			{
-				"value":	"CA0029",
+				"value":	"CA000029",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the Republic of Azerbaijan"
 			},
 			{
-				"value":	"CA0030",
+				"value":	"CA000030",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the Republic of Moldova"
 			},
 			{
-				"value":	"CA0031",
+				"value":	"CA000031",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the Georgia"
 			},
 			{
-				"value":	"CA0032",
+				"value":	"CA000032",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the Democratic Socialist Republic of Sri Lanka"
 			},
 			{
-				"value":	"CA0033",
+				"value":	"CA000033",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the Republic of Uzbekistan"
 			},
 			{
-				"value":	"CA0034",
+				"value":	"CA000034",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the Independent State of Papua New Guinea"
 			},
 			{
-				"value":	"CA0035",
+				"value":	"CA000035",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the United Arab Emirates"
 			},
 			{
-				"value":	"CA0036",
+				"value":	"CA000036",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the Kyrgyz Republic"
 			},
 			{
-				"value":	"CA0037",
+				"value":	"CA000037",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the Republic of Kazakhstan"
 			},
 			{
-				"value":	"CA0038",
+				"value":	"CA000038",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the Ukraine"
 			},
 			{
-				"value":	"CA0039",
+				"value":	"CA000039",
 				"description":	"Joint Crediting Mechanism between the Government of Japan and the United Republic of Tanzania"
 			},
 			{
-				"value":	"CA0040",
+				"value":	"CA000040",
 				"description":	"Rwanda and Singapore"
 			},
 			{
-				"value":	"CA0041",
+				"value":	"CA000041",
 				"description":	"Rwanda and Sweden"
 			}
 		],
