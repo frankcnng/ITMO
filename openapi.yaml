@@ -1,4 +1,3 @@
-
 openapi: 3.0.3
 info:
   title: API supporting the communication standards for transactions on ITMOs (Work In Progress)
@@ -9,8 +8,9 @@ info:
      <br><br>Participating Parties opting to apply the guidance referred to in 
      decision 6/CMA.4, annex I, chapter I.B are expected to adhere to this API when they interoperate.
      <br><br><b>Current status</b>
-     <br><br>This API is currently in development.
-  version: 0.0.4
+     <br><br>v0.0.4 corresponds to the Interoperability Standards version 1.0</b>.
+     <br><br>v0.0.5 corresponds includes changes for Interoperability Standards version 1.0 Errata)
+  version: 0.0.5
   contact: 
     name: UNFCCC secretariat (Voluntary forum of Article 6 registry system administrators and technical experts)
     email: a6rsaf@unfccc.int
@@ -1777,7 +1777,8 @@ components:
       type: object
       required:
         - registryId
-        - id
+        - accountId
+        - accountType
       properties:
         registryId:
           $ref: "#/components/schemas/RegistryId"
@@ -1788,7 +1789,7 @@ components:
             IBAN conformant account number:<br>
             -	Country code (using ISO 3166-1 alpha-2) of the Party holding the account – two letters,<br>
             -	Check digits (using MOD-97-10 as per ISO/IEC 7064:2003)  – two digits, and<br>
-            -	Basic Bank Account Number (BBAN) – 4 to 30 alphanumeric characters.
+            -	Basic Bank Account Number (BBAN) – 11 to 30 alphanumeric characters.
           example: "IE64IRCE92050112345678"
         accountType:
           type: integer
@@ -1796,6 +1797,16 @@ components:
             Refer to common nomenclatures for defined Account Types and their values.
           minimum: 100
           maximum: 999
+        ndcStartDate:
+          type: string
+          format: date-time
+          description: Start date-time of the Party's NDC implementation period for this account.<br>
+            Must be provided for 300 Use towards NDC accounts.
+        ndcEndDate:
+          type: string
+          format: date-time
+          description: End date-time of the Party's NDC implementation period for this account.<br>
+            Must be provided for 300 Use towards NDC accounts.
         labels:
           type: array
           maxItems: 10
@@ -1923,7 +1934,7 @@ components:
           example: ACCEPTED
         statusdatetime:
           type: string
-          format: dateTime
+          format: date-time
           example: "2024-07-21T17:32:28Z"
         errors:
           type: array
