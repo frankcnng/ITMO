@@ -1801,12 +1801,12 @@ components:
           type: string
           format: date-time
           description: Start date-time of the Party's NDC implementation period for this account.<br>
-            Must be provided for 300 Use towards NDC accounts.
+            Must be provided for 200 Use towards NDC accounts.
         ndcEndDate:
           type: string
           format: date-time
           description: End date-time of the Party's NDC implementation period for this account.<br>
-            Must be provided for 300 Use towards NDC accounts.
+            Must be provided for 200 Use towards NDC accounts.
         labels:
           type: array
           maxItems: 10
